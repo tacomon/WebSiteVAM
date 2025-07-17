@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Bolsa de trabajo con las mejores oportunidades laborales">
+    <!-- Tailwind CSS desde CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Iconos Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" href="https://via.placeholder.com/32" type="image/png">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Bolsa de Trabajo | Oportunidad: Administrativo</title>
+</head>
+
+<body class="bg-gray-100">
+    <nav class="bg-gray-800 shadow-lg sticky top-0 z-40">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div class="flex h-16 items-center justify-between">
+                <!-- Logo y marca -->
+                <div class="flex items-center">
+                    <div class="flex-shrink-0">
+                        <img class="h-8 w-auto" src="https://via.placeholder.com/150?text=Logo"
+                            alt="Logo Bolsa de Trabajo">
+                    </div>
+                    <div class="hidden md:block ml-4">
+                       <a href="../public/bolsatrabjo.html"><span class="text-white font-semibold">Bolsa de Trabajo</span></a>
+                    </div>
+                </div>
+
+                <!-- Menú principal -->
+                <div class="hidden md:block">
+                    <div class="flex space-x-4">
+                        <a href="#" class="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium">Inicio</a>
+                        <a href="#"
+                            class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Vacantes</a>
+                        <a href="#"
+                            class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Contacto</a>
+                    </div>
+                </div>
+
+                <!-- Controles de usuario -->
+                <div class="flex items-center space-x-4">
+                    <button type="button"
+                        class="relative rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none">
+                        <span class="sr-only">Notificaciones</span>
+                        <i class="fas fa-bell text-xl"></i>
+                        <span
+                            class="absolute top-0 right-0 block h-2 w-2 rounded-full bg-red-500 ring-2 ring-gray-800"></span>
+                    </button>
+
+                    <!-- Menú de perfil -->
+                    <div class="relative">
+                        <button type="button" class="flex items-center space-x-2 focus:outline-none"
+                            id="user-menu-button">
+                            <span class="sr-only">Abrir menú de usuario</span>
+                            <img class="h-8 w-8 rounded-full" src="https://via.placeholder.com/32" alt="Foto de perfil">
+                            <span class="hidden md:inline text-gray-300 text-sm">Mi cuenta</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Menú móvil -->
+                <div class="md:hidden">
+                    <button type="button"
+                        class="mobile-menu-button inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none">
+                        <span class="sr-only">Abrir menú principal</span>
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+        <header class="app-header h-[150px] w-full">
+            <h1 class="app-title">¡Postulate ahora!</h1>
+        </header>
+        <main class="container mx-auto px-4 py-8">
+        <!-- Tarjeta de vacante mejorada -->
+        <div class="bg-white rounded-lg shadow-md overflow-hidden">
+            <!-- Encabezado con degradado -->
+            <div class="bg-gradient-to-r from-blue-100 to-blue-200 p-6 text-gray-800">
+                <div class="flex flex-col md:flex-row md:justify-between md:items-center">
+                    <div>
+                        <h1 class="text-2xl md:text-3xl font-bold mb-1">Administrativo</h1>
+                        <p>Área de reclutamiento</p>
+                    </div>
+                    <button onclick="openModal()"
+                        class="mt-4 md:mt-0 bg-white text-blue-600 hover:bg-blue-50 font-medium py-2 px-6 rounded-lg transition duration-300 shadow-md">
+                        <i class="fas fa-paper-plane mr-2"></i>Postularse
+                    </button>
+                </div>
+            </div>
+
+            <!-- Contenido organizado en pestañas -->
+            <div class="p-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- Columna izquierda -->
+                    <div>
+                        <section class="mb-8">
+                            <h2 class="text-xl font-semibold text-gray-800 mb-4 pb-2 border-b border-gray-200">
+                                <i class="fas fa-file-alt text-blue-600 mr-2"></i>Descripción del puesto
+                            </h2>
+                            <p class="text-gray-700 leading-relaxed">
+                                Buscamos personal administrativo para el área de reclutamiento con experiencia en
+                                selección de personal y manejo de plataformas de reclutamiento.
+                            </p>
+                        </section>
+
+                        <section class="mb-8">
+                            <h2 class="text-xl font-semibold text-gray-800 mb-4 pb-2 border-b border-gray-200">
+                                <i class="fas fa-tools text-blue-600 mr-2"></i>Requisitos y habilidades
+                            </h2>
+                            <ul class="enhanced-list list-disc pl-5 text-gray-700">
+                                <li>Experiencia en reclutamiento y selección</li>
+                                <li>Manejo de plataformas de reclutamiento (LinkedIn, Bumeran, etc.)</li>
+                                <li>Excel avanzado</li>
+                                <li>Buen manejo de relaciones interpersonales</li>
+                                <li>Capacidad de trabajo bajo presión</li>
+                                <li>Organización y atención al detalle</li>
+                            </ul>
+                        </section>
+                    </div>
+
+                    <!-- Columna derecha -->
+                    <div>
+                        <section class="mb-8">
+                            <h2 class="text-xl font-semibold text-gray-800 mb-4 pb-2 border-b border-gray-200">
+                                <i class="far fa-clock text-blue-600 mr-2"></i>Horario y ubicación
+                            </h2>
+                            <div class="space-y-3 text-gray-700">
+                                <p><i class="fas fa-calendar-day text-blue-500 mr-2"></i> Lunes a Viernes</p>
+                                <p><i class="fas fa-clock text-blue-500 mr-2"></i> 9:00 am - 5:30 pm</p>
+                                <p><i class="fas fa-map-marker-alt text-blue-500 mr-2"></i> San Luis de la Paz</p>
+                                <p><i class="fas fa-briefcase text-blue-500 mr-2"></i> Presencial (tiempo completo)</p>
+                            </div>
+                        </section>
+
+                        <section>
+                            <h2 class="text-xl font-semibold text-gray-800 mb-4 pb-2 border-b border-gray-200">
+                                <i class="fas fa-gift text-blue-600 mr-2"></i>Beneficios
+                            </h2>
+                            <ul class="enhanced-list list-disc pl-5 text-gray-700">
+                                <li>Prestaciones de ley superiores</li>
+                                <li>Oportunidades de crecimiento profesional</li>
+                                <li>Bonos por desempeño trimestrales</li>
+                                <li>Programa de capacitaciones continuas</li>
+                                <li>Seguro médico extensivo</li>
+                                <li>Vales de despensa y restaurante</li>
+                                <li>Ambiente de trabajo colaborativo</li>
+                            </ul>
+                        </section>
+                    </div>
+                </div>
+
+                <!-- Sección de salario (opcional) -->
+                <div class="mt-8 p-4 bg-blue-50 rounded-lg border border-blue-100">
+                    <h3 class="text-lg font-semibold text-blue-800 mb-2">
+                        <i class="fas fa-money-bill-wave mr-2"></i>Rango salarial
+                    </h3>
+                    <p class="text-gray-700">$15,000 - $20,000 MXN mensuales (dependiendo de experiencia)</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+    <!-- Modal -->
+    <div id="modal" class="modal fixed inset-0 z-50 overflow-y-auto hidden" aria-labelledby="modal-title" role="dialog"
+        aria-modal="true">
+        <div class="flex items-center justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
+            <!-- Fondo oscuro con transición -->
+            <div class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity ease-out duration-300"
+                aria-hidden="true" onclick="closeModal()"></div>
+
+            <!-- Contenido del modal -->
+            <div
+                class="inline-block align-bottom bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg w-full">
+                <!-- Encabezado -->
+                <div class="bg-blue-600 px-4 py-3 sm:px-6">
+                    <h3 class="text-lg leading-6 font-medium text-white" id="modal-title">
+                        <i class="fas fa-user-tie mr-2"></i>Postulación para: <span
+                            class="font-bold">Administrativo</span>
+                    </h3>
+                </div>
+
+                <!-- Formulario -->
+                <div class="bg-white px-4 pt-5 pb-4 sm:p-6">
+                    <form class="space-y-4">
+                        <div>
+                            <label for="nombre" class="block text-sm font-medium text-gray-700 mb-1">
+                                <i class="fas fa-user text-blue-500 mr-1"></i>Nombre completo
+                            </label>
+                            <input type="text" id="nombre" name="nombre" required
+                                class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm p-2 border hover:border-blue-300 transition">
+                        </div>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div>
+                                <label for="telefono" class="block text-sm font-medium text-gray-700 mb-1">
+                                    <i class="fas fa-phone text-blue-500 mr-1"></i>Teléfono
+                                </label>
+                                <input type="tel" id="telefono" name="telefono" required
+                                    class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm p-2 border hover:border-blue-300 transition">
+                            </div>
+
+                            <div>
+                                <label for="email" class="block text-sm font-medium text-gray-700 mb-1">
+                                    <i class="fas fa-envelope text-blue-500 mr-1"></i>Correo Electrónico
+                                </label>
+                                <input type="email" id="email" name="email" required
+                                    class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm p-2 border hover:border-blue-300 transition">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label for="cv" class="block text-sm font-medium text-gray-700 mb-1">
+                                <i class="fas fa-file-pdf text-blue-500 mr-1"></i>Curriculum Vitae
+                            </label>
+                            <div class="mt-1 flex items-center">
+                                <label for="cv"
+                                    class="cursor-pointer bg-blue-50 text-blue-700 hover:bg-blue-100 px-4 py-2 rounded-l-md border border-r-0 border-gray-300 text-sm font-medium transition">
+                                    <i class="fas fa-upload mr-2"></i>Seleccionar archivo
+                                </label>
+                                <span id="file-name"
+                                    class="flex-1 px-3 py-2 border border-gray-300 rounded-r-md text-sm text-gray-500 truncate">
+                                    Ningún archivo seleccionado
+                                </span>
+                                <input type="file" id="cv" name="cv" accept=".pdf" required class="hidden">
+                            </div>
+                            <p class="mt-1 text-xs text-gray-500">Formato PDF (tamaño máximo: 5MB)</p>
+                        </div>
+
+                        <div>
+                            <label for="mensaje" class="block text-sm font-medium text-gray-700 mb-1">
+                                <i class="fas fa-comment text-blue-500 mr-1"></i>Mensaje adicional (opcional)
+                            </label>
+                            <textarea id="mensaje" name="mensaje" rows="3"
+                                class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm p-2 border hover:border-blue-300 transition"></textarea>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Pie del modal -->
+                <div class="bg-gray-50 px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse">
+                    <button type="button" onclick="submitForm()"
+                        class="w-full inline-flex justify-center items-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-blue-600 text-base font-medium text-white hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 sm:ml-3 sm:w-auto sm:text-sm transition">
+                        <i class="fas fa-paper-plane mr-2"></i>Enviar solicitud
+                    </button>
+                    <button type="button" onclick="closeModal()"
+                        class="mt-3 w-full inline-flex justify-center items-center rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-base font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm transition">
+                        <i class="fas fa-times mr-2"></i>Cancelar
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <!-- Columna 1: Información -->
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Bolsa de Trabajo</h3>
+                    <p class="text-gray-400 mb-4">Conectando talento con oportunidades.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300 text-xl">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300 text-xl">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300 text-xl">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300 text-xl">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Derechos de autor -->
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400 text-sm">
+                <p>© 2023 Bolsa de Trabajo. Todos los derechos reservados.</p>
+                <div class="mt-2 space-x-4">
+                    <a href="#" class="hover:text-white transition">Términos de servicio</a>
+                    <a href="#" class="hover:text-white transition">Política de privacidad</a>
+                    <a href="#" class="hover:text-white transition">Aviso legal</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Manejo del modal
+        function openModal() {
+            document.getElementById('modal').classList.remove('hidden');
+            document.body.classList.add('overflow-hidden');
+        }
+
+        function closeModal() {
+            document.getElementById('modal').classList.add('hidden');
+            document.body.classList.remove('overflow-hidden');
+        }
+
+        function submitForm() {
+            // Validación del formulario aquí
+            alert('¡Gracias por tu postulación! Revisaremos tu información y nos pondremos en contacto contigo.');
+            closeModal();
+        }
+
+        // Mostrar nombre del archivo seleccionado
+        document.getElementById('cv').addEventListener('change', function (e) {
+            const fileName = e.target.files[0] ? e.target.files[0].name : 'Ningún archivo seleccionado';
+            document.getElementById('file-name').textContent = fileName;
+        });
+
+        // Menú móvil
+        document.querySelector('.mobile-menu-button').addEventListener('click', function () {
+            // Lógica para mostrar/ocultar menú móvil
+            console.log('Menú móvil clickeado');
+        });
+    </script>
+</body>
+
+</html>
