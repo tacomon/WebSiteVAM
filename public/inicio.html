@@ -148,11 +148,27 @@
   .benefits-card:hover {
     animation: borderGlow 1.5s ease infinite;
   }
+  .video-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
 
-    .video-container {
+.video-container video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+}
+
+    /* .video-container {
     position: relative;
     width: 100%;
-    height: 100vh; /* altura igual a la pantalla */
+    height: 100vh; 
     overflow: hidden;
   }
 
@@ -164,7 +180,7 @@
     min-height: 100%;
     transform: translate(-50%, -50%);
     object-fit: cover;
-  }
+  } */
 
 
   .modern-footer {
@@ -187,7 +203,22 @@
 
 .footer-content {
     position: relative;
-    z-index: 2;
+    z-index: 2;.video-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.video-container video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+}
 }
 
 .footer-logo {
@@ -358,7 +389,7 @@
   <a class="nav-link" href="#">Crédito individual</a>
   </li>
   <li class="nav-item">
-  <a class="nav-link" href="#">Sobre nosotros</a>
+  <a class="nav-link" href="../public/nosotros.html">Sobre nosotros</a>
   </li>
   <li class="nav-item dropdown">
   <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -378,10 +409,11 @@
   </nav>
     <body>
       <header>
-      <div class="video-container p-4">
-        <video src="../assets/file.mp4" autoplay muted playsinline loop></video>
-      </div>
+        <div class="video-container">
+          <video src="../assets/file.mp4" autoplay muted playsinline loop></video>
+        </div>
       </header>
+
     <!---- Hero Video Section -->
       <section class="hero-section bg-light text-dark py-2">
         <div class="container py-5">
