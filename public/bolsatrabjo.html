@@ -1,11 +1,108 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es"> <!-- Cambiado a español -->
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <!-- Tailwind CSS desde CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Bolsa de Trabajo</title>
+    <style>
+    </style>
 </head>
-<body>
-    
+
+<body class="bg-gray-100">
+    <div class="relative mb-12 w-full bg-cover bg-center" style="background-image: url('../assets/portadaa.png');">
+        <div class="h-[400px] w-full"></div>
+    </div>
+    <main class="container mx-auto px-4 py-8">
+        <br>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+            <!-- Card 1 -->
+            <div class="card-hover">
+                <a href="../public/card-vacantes.html"
+                    class="block p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-50 transition-all duration-300">
+                    <div class="text-blue-500 mb-4">
+                        <i class="fas fa-users fa-2x"></i>
+                    </div>
+                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">Asesor de Operación</h5>
+                    <p class="font-normal text-gray-700">Vacante disponible para puesto de atención al cliente con
+                        experiencia.</p>
+                    <div class="mt-4 flex items-center text-sm text-gray-500">
+                        <i class="fas fa-map-marker-alt mr-2"></i>
+                        <span>San Luis de la Paz</span>
+                    </div>
+                    <span
+                        class="inline-block mt-3 px-3 py-1 text-sm font-semibold text-orange-800 bg-orange-100 rounded-full">Tiempo
+                        completo</span>
+                </a>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="card-hover">
+                <a href="../public/card-vacantes.html"
+                    class="block p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-50 transition-all duration-300">
+                    <div class="text-blue-500 mb-4">
+                        <i class="fas fa-briefcase fa-2x"></i>
+                    </div>
+                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">Administrativo</h5>
+                    <p class="font-normal text-gray-700">Buscamos personal para área administrativa con conocimientos en
+                        office.</p>
+                    <div class="mt-4 flex items-center text-sm text-gray-500">
+                        <i class="fas fa-map-marker-alt mr-2"></i>
+                        <span>Por confirmar</span>
+                    </div>
+                    <span
+                        class="inline-block mt-3 px-3 py-1 text-sm font-semibold text-orange-800 bg-orange-100 rounded-full">Tiempo
+                        completo</span>
+                </a>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="card-hover">
+                <a href="../public/card-vacantes.html"
+                    class="block p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-50 transition-all duration-300">
+                    <div class="text-blue-500 mb-4">
+                        <i class="fa fa-archive fa-2x"></i>
+                    </div>
+                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">Administrativo RH</h5>
+                    <p class="font-normal text-gray-700">Vacante para area de reclutamiento, capacidad de relación con
+                        las personas</p>
+                    <div class="mt-4 flex items-center text-sm text-gray-500">
+                        <i class="fas fa-map-marker-alt mr-2"></i>
+                        <span>San Diego de la Union</span>
+                    </div>
+                    <span
+                        class="inline-block mt-3 px-3 py-1 text-sm font-semibold text-orange-800 bg-orange-100 rounded-full">Tiempo
+                        completo</span>
+                </a>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="card-hover">
+                <a href="../public/card-vacantes.html"
+                    class="block p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-50 transition-all duration-300">
+                    <div class="text-blue-500 mb-4">
+                        <i class="fas fa-briefcase fa-2x"></i>
+                    </div>
+                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">Mercadotecnia</h5>
+                    <p class="font-normal text-gray-700">Vacante para marketing, publicidad y redes sociales</p>
+                    <div class="mt-4 flex items-center text-sm text-gray-500">
+                        <i class="fas fa-map-marker-alt mr-2"></i>
+                        <span>San Miguel de Allende</span>
+                    </div>
+                    <span
+                        class="inline-block mt-3 px-3 py-1 text-sm font-semibold text-orange-800 bg-orange-100 rounded-full">Tiempo
+                        completo</span>
+                </a>
+            </div>
+        </div>
+
+
+    </main>
+    <script src="../js/script.js"></script>
 </body>
+
 </html>

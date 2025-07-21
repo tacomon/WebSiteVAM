@@ -1,13 +1,1068 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Inicio</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tipos de Crédito - Soluciones Financieras</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+  :root {
+  --primary-color: #547ed979;
+  --secondary-color: #f9ba19;
+  --dark-color: #1e293b;
+  --light-color: #f8fafc;
+  }
+
+  html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+  }
+  .navbar-custom {
+  position: sticky;
+  top: 0;
+  z-index: 1030;
+  background-color: #ffffff !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+  }
+
+  .navbar-brand img {
+  transition: transform 0.3s ease;
+  }
+
+  .navbar-brand img:hover {
+  transform: scale(1.05);
+  }
+
+  .nav-link {
+  font-weight: 500;
+  transition: color 0.2s ease;
+  }
+
+  .nav-link:hover {
+  color: #0d6efd;
+  }
+
+
+  .section-title {
+  position: relative;
+  padding-bottom: 1rem;
+  margin: 3rem 0;
+  text-align: center;
+  color: var(--dark-color);
+  }
+
+  .section-title:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: var(--secondary-color);
+  border-radius: 2px;
+  }
+
+
+  @media (max-width: 768px) {
+  .card-img {
+  width: 140px;
+  height: 140px;
+  }
+
+  .section-title {
+  font-size: 1.8rem;
+  }
+  }
+
+  .service-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .service-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.1);
+  }
+
+    /* Animaciones personalizadas */
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.03); }
+    100% { transform: scale(1); }
+  }
+  
+  @keyframes borderGlow {
+    0% { box-shadow: 0 0 0 0 rgba(52, 188, 10, 0.4); }
+    100% { box-shadow: 0 0 0 10px rgba(52, 188, 10, 0); }
+  }
+  
+  /* Estilos para las tarjetas animadas */
+  .service-card {
+    transition: all 0.4s ease;
+    animation: fadeInUp 0.6s ease forwards;
+    opacity: 0;
+  }
+  
+  /* Retrasos para animación escalonada */
+  .service-card:nth-child(1) { animation-delay: 0.2s; }
+  .service-card:nth-child(2) { animation-delay: 0.4s; }
+  .service-card:nth-child(3) { animation-delay: 0.6s; }
+  
+  .service-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1) !important;
+  }
+  
+  .card-icon {
+    transition: all 0.3s ease;
+  }
+  
+  .service-card:hover .card-icon {
+    animation: pulse 1.5s infinite;
+  }
+  
+  .btn-hover-grow {
+    transition: all 0.3s ease;
+  }
+  
+  .btn-hover-grow:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Efecto especial para la tarjeta de beneficios */
+  .benefits-card:hover {
+    animation: borderGlow 1.5s ease infinite;
+  }
+
+    .video-container {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* altura igual a la pantalla */
+    overflow: hidden;
+  }
+
+  .video-container video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+  }
+
+
+  .modern-footer {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+    position: relative;
+    overflow: hidden;
+}
+
+.modern-footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, rgba(108, 92, 231, 0.1) 0%, rgba(0, 0, 0, 0) 100%);
+    z-index: 1;
+}
+
+.footer-content {
+    position: relative;
+    z-index: 2;
+}
+
+.footer-logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #2d3436;
+    text-decoration: none;
+}
+
+.footer-title {
+    color: #2d3436;
+    font-weight: 600;
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    position: relative;
+    display: inline-block;
+}
+
+.footer-title::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, #6c5ce7, transparent);
+}
+
+.contact-info {
+    list-style: none;
+    padding: 0;
+}
+
+.contact-info li {
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.contact-info i {
+    color: #6c5ce7;
+    width: 20px;
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #2d3436;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.social-icon:hover {
+    transform: translateY(-3px);
+    color: #6c5ce7;
+    box-shadow: 0 5px 15px rgba(108, 92, 231, 0.2);
+}
+
+.quick-links {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    padding: 0;
+    list-style: none;
+}
+
+.quick-links a {
+    color: #2d3436;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.quick-links a:hover {
+    color: #6c5ce7;
+    transform: translateX(5px);
+}
+
+.quick-links a::before {
+    content: '→';
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.quick-links a:hover::before {
+    opacity: 1;
+}
+
+.newsletter-input {
+    border: none;
+    padding: 0.8rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.btn-subscribe {
+    background: linear-gradient(45deg, #6c5ce7, #a363d9);
+    border: none;
+    box-shadow: 0 2px 10px rgba(108, 92, 231, 0.2);
+    padding: 0.8rem 2rem;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.btn-subscribe:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(108, 92, 231, 0.3);
+}
+
+.footer-bottom {
+    background: white;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.footer-bottom p {
+    margin: 0;
+    color: #6c757d;
+}
+
+.footer-bottom a {
+    color: #6c5ce7;
+    text-decoration: none;
+}
+
+.footer-bottom a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .quick-links {
+        grid-template-columns: 1fr;
+    }
+}
+  </style>
   </head>
-  <body>
-    <h1>Hello, world!</h1>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
-  </body>
+  <nav class="navbar navbar-expand-lg navbar-custom">
+  <div class="container-fluid">
+  <a class="navbar-brand" href="#">
+  <img src="https://static.wixstatic.com/media/0bf950_155f8cd81f6d4fe5ac3419b8e0397b40~mv2.png/v1/crop/x_0,y_260,w_6000,h_2480/fill/w_381,h_158,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/LOGO%20SIN%20FONDO%20OFICIAL.png" height="80" width="170" alt="Logo">
+  </a>
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+  <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+  <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+  <li class="nav-item">
+  <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+  </li>
+  <li class="nav-item">
+  <a class="nav-link" href="#">Crédito comunal solidario</a>
+  </li>
+  <li class="nav-item">
+  <a class="nav-link" href="#">Crédito individual</a>
+  </li>
+  <li class="nav-item">
+  <a class="nav-link" href="#">Sobre nosotros</a>
+  </li>
+  <li class="nav-item dropdown">
+  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+  Sociales
+  </a>
+  <ul class="dropdown-menu">
+  <li><a class="dropdown-item" href="#">Facebook</a></li>
+  <li><a class="dropdown-item" href="#">Instagram</a></li>
+  <li><a class="dropdown-item" href="#">Whatsapp</a></li>
+  <li><hr class="dropdown-divider"></li>
+  <li><a class="dropdown-item" href="#">Artixan</a></li>
+  </ul>
+  </li>
+  </ul>
+  </div>
+  </div>
+  </nav>
+    <body>
+      <header>
+      <div class="video-container p-4">
+        <video src="../assets/file.mp4" autoplay muted playsinline loop></video>
+      </div>
+      </header>
+    <!---- Hero Video Section -->
+      <section class="hero-section bg-light text-dark py-2">
+        <div class="container py-5">
+          <div class="row align-items-center">
+            <div class="col-lg-6">
+              <h1 class="display-4 fw-bold mb-4">Transforma tus sueños en realidad</h1>
+                <p class="lead mb-4">Obtén el crédito que necesitas para iniciar tu negocio</p>
+            <div class="d-flex gap-3 mb-4">
+                <button class="btn btn-warning btn-lg px-4 fw-bold">Chatear con nuestro asesor virtual</button>
+                <button class="btn btn-outline-dark btn-lg px-4">Más información</button>
+            </div>
+            <div class="d-flex gap-4">
+                <div>
+                <h3 class="fw-bold">+300 </h3>
+                  <p>Clientes</p>
+                </div>
+              <div>
+              <h3 class="fw-bold">+15</h3>
+                <p>Años de experiencia</p>
+              </div>
+            </div>
+            </div>
+              <div class="col-lg-6">
+                <img src="https://credy-api.credy.com/uploads/images/79b76d0a-06f7-473f-b99b-e860596a7e26/cardloan.png" alt="Personas felices recibiendo dinero" class="img-fluid rounded shadow">
+              </div>
+          </div>
+        </div>
+      </section>
+      <!---BENEFICIOS Y CREDITOS-->
+      <div class="container py-5">
+        <h4 class="section-title display-5 fw-bold">Conoce cómo podemos apoyar tu crecimiento</h4>
+        <div class="row text-center g-4">
+
+          <!-- Crédito comunal con animaciones -->
+          <div class="col-md-4">
+            <div class="card border-success shadow h-100 service-card">
+              <div class="card-body p-4">
+                <i class="fa-solid fa-people-group fa-3x mb-3 card-icon" style="color: #34bc0a;"></i>
+                <h4 class="card-title fw-bold">Crédito Comunal Solidario</h4>
+                <p class="card-text">
+                  Apoyo a grupos solidarios con microempresas o negocios por iniciar. Financia su crecimiento y mejora su calidad de vida.
+                </p>
+                <button class="btn btn-outline-success mt-3 btn-hover-grow">Más información</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Crédito individual con animaciones -->
+          <div class="col-md-4">
+            <div class="card border-primary shadow h-100 service-card">
+              <div class="card-body p-4">
+                <i class="fa-solid fa-person fa-3x mb-3 card-icon" style="color: #167fb8;"></i>
+                <h4 class="card-title fw-bold">Crédito Individual</h4>
+                <p class="card-text">
+                  Para clientes nuevos o recurrentes que requieren montos mayores para invertir o fortalecer su microempresa.
+                </p>
+                <button class="btn btn-outline-primary mt-3 btn-hover-grow">Más información</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Beneficios con animaciones especiales -->
+          <div class="col-md-4">
+            <div class="card border-warning shadow h-100 service-card benefits-card">
+              <div class="card-body p-4">
+              <i class="fa-solid fa-trophy fa-3x mb-3" style="color: #FFD43B;"></i>
+                <h4 class="card-title fw-bold">Beneficios</h4>
+                <ul class="list-unstyled text-start mt-3">
+                  <li>✦ Baja tasa de interés</li>
+                  <li>✦ Regalos en temporada de regreso a clases y navideños</li>
+                  <li>✦ Bono por recomendación</li>
+                  <li>✦ Atención personalizada</li>
+                  <li>✦ Microseguro de vida</li>
+                  <li>✦ Sin comisión por apertura</li>
+                </ul>
+                <div class="text-center">
+                  <button class="btn btn-outline-warning mt-3 btn-hover-grow">Más información</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      
+      <!-- Otros Servicios -->
+      <section class="otros-servicios py-5 bg-light">
+      <div class="container">
+      <h2 class="text-center fw-bold mb-4">Otros Servicios</h2>
+      <div class="row g-4 justify-content-center">
+
+      <!-- Servicio 1 -->
+      <div class="col-md-4">
+      <div class="service-card text-center p-4 shadow-sm rounded bg-white h-100">
+      <i class="fas fa-file-invoice-dollar fa-2x mb-3 text-warning"></i>
+      <h5 class="fw-semibold">Pago de servicios</h5>
+      <p class="text-muted">Realiza pagos de luz, agua, teléfono y más en nuestras sucursales.</p>
+      </div>
+      </div>
+
+      <!-- Servicio 2 -->
+      <div class="col-md-4">
+      <div class="service-card text-center p-4 shadow-sm rounded bg-white h-100">
+      <i class="fas fa-hand-holding-usd fa-2x mb-3 text-warning"></i>
+      <h5 class="fw-semibold">Remesas</h5>
+      <p class="text-muted">Recibe y envía dinero a nivel nacional e internacional.</p>
+      </div>
+      </div>
+
+      <!-- Servicio 3 -->
+      <div class="col-md-4">
+      <div class="service-card text-center p-4 shadow-sm rounded bg-white h-100">
+      <i class="fas fa-mobile-alt fa-2x mb-3 text-warning"></i>
+      <h5 class="fw-semibold">Recarga de tiempo aire</h5>
+      <p class="text-muted">Realiza recargas para todas las compañías en nuestras sucursales.</p>
+      </div>
+      </div>
+
+      </div>
+      </div>
+      </section>
+      <!-- Preguntas Frecuentes -->
+      <section class="faq py-5 bg-light">
+        <div class="container">
+          <h2 class="section-title display-5 fw-bold">Preguntas Frecuentes</h2>
+          <div class="accordion" id="accordionExample">
+            <div class="accordion-item">
+             <h2 class="accordion-header">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+                ¿Qué necesito para solicitar un crédito?
+                </button>
+              </h2>
+              <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+             <div class="accordion-body">
+                Necesitas contar con identificación oficial, comprobante de domicilio y demostrar tu capacidad de pago.
+            </div>
+              </div>
+            </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+                ¿Cuánto tiempo tarda la aprobación?
+              </button>
+            </h2>
+            <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                Generalmente el proceso tarda entre 24 a 48 horas, dependiendo de la documentación y verificación.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">
+                ¿Puedo liquidar mi crédito antes del plazo?
+                </button>
+              </h2>
+            <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                Sí, puedes realizar pagos anticipados sin penalización y así reducir intereses.
+              </div>
+            </div>
+          </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="aten py-5 bg-light">
+        <div class="container">
+          <h2 class="section-title display-5 fw-bold text-center mb-5">
+            Conoce nuestro horario de atención
+          </h2>
+          <div class="row text-center g-4">
+            <div class="col-md-4 border-end">
+              <h5 class="fw-bold text-success mb-2">Dolores Hidalgo</h5>
+              <p class="mb-1">Rivera del Río, 65 B3</p>
+              <p class="text-muted fw-semibold mb-1">Horario</p>
+              <p class="mb-0">Lunes a Viernes</p>
+              <p class="text-primary mb-2">9:00 a.m - 6:00 p.m</p>
+              <p class="mb-0">Sábado</p>
+              <p class="text-primary">9:00 a.m - 2:00 p.m</p>
+            </div>
+            <div class="col-md-4 border-end">
+              <h5 class="fw-bold text-success mb-2">San Luis de la Paz</h5>
+              <p class="mb-1">Centro</p>
+              <p class="text-muted fw-semibold mb-1">Horario</p>
+              <p class="mb-0">Lunes a Viernes</p>
+              <p class="text-primary mb-2">9:00 a.m - 6:00 p.m</p>
+              <p class="mb-0">Sábado</p>
+              <p class="text-primary">9:00 a.m - 2:00 p.m</p>
+            </div>
+            <div class="col-md-4">
+              <h5 class="fw-bold text-success mb-2">Miguel de Allende</h5>
+              <p class="mb-1">Plaza Mayor</p>
+              <p class="text-muted fw-semibold mb-1">Horario</p>
+              <p class="mb-0">Lunes a Viernes</p>
+              <p class="text-primary mb-2">9:00 a.m - 6:00 p.m</p>
+              <p class="mb-0">Sábado</p>
+              <p class="text-primary">9:00 a.m - 2:00 p.m</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Bootstrap JS Bundle -->
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+
+
+<!-- Script para animaciones al hacer scroll -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Animación de aparición al hacer scroll
+      const cards = document.querySelectorAll('.service-card');
+      
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.style.opacity = '1';
+          }
+        });
+      }, { threshold: 0.1 });
+      
+      cards.forEach(card => {
+        observer.observe(card);
+      });
+      
+      // Efecto especial para el botón de beneficios
+      const benefitsBtn = document.querySelector('.benefits-card .btn');
+      benefitsBtn.addEventListener('mouseenter', function() {
+        this.innerHTML = '<i class="fas fa-gift me-2"></i> Ver todos los beneficios';
+      });
+      
+      benefitsBtn.addEventListener('mouseleave', function() {
+        this.innerHTML = 'Más información';
+      });
+    });
+    </script>
+
+        <footer class="modern-footer pt-5">
+        <div class="container footer-content">
+            <div class="row g-4 mb-5">
+                <!-- Company Info -->
+                <div class="col-lg-4 col-md-6">
+                    <a href="#" class="footer-logo d-block mb-4">
+                        <img src="https://static.wixstatic.com/media/0bf950_155f8cd81f6d4fe5ac3419b8e0397b40~mv2.png/v1/crop/x_0,y_260,w_6000,h_2480/fill/w_508,h_210,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/LOGO%20SIN%20FONDO%20OFICIAL.png" alt="logo" width="120" height="50" >
+                    </a>
+                    <p class="text-muted mb-4">
+                        VAMOS A MEJORAR
+                        es una empresa mexicana dedicada al otorgamiento de servicios financieros para micro empresas con la convicción de crecimiento Laboral y Personal
+                    </p>
+                    <ul class="contact-info mb-4">
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Rivera del Río #65 Int B - 3 Plaza Patria Zona Centro, C.P. 37800, Dolores Hidalgo, Guanajuato</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <span>(+52) 4181544583</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <span>vamosamejorar@vamosamejorar.com</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="col-lg-4 col-md-6">
+                    <h3 class="footer-title">Links rápidos</h3>
+                    <ul class="quick-links">
+                        <li><a href="#">Aviso de privacidad</a></li>
+                        <li><a href="#">Unidad Especializada</a></li>
+                        <li><a href="#">Costos y Comisiones de nuestros productos</a></li>
+                        <li><a href="#">Condusef</a></li>
+                        <li><a href="#">Buro de entidades financieras</a></li>
+                        <li><a href="#">Términos y condiciones</a></li>
+                    </ul>
+                </div>
+
+                <!-- Newsletter -->
+                <div class="col-lg-4 col-md-12">
+                    <h3 class="footer-title">Mantente conectado</h3>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/financiera.vam" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/vamosamejora.r?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="https://wa.me/5214181544583?text=Quiero%20m%C3%A1s%20informaci%C3%B3n%20para%20solicitar%20mi%20cr%C3%A9dito" class="social-icon"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="row py-4">
+                    <div class="col-md-6 text-center text-md-start">
+                        <p>&copy; 2025 VAMOS A MEJORAR S.A. DE C.V. SOFOM. E.N.R. Todos los derechos reservados.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    </body>
 </html>
+
+
+
+
+
+<!-- 
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tipos de Crédito - Soluciones Financieras</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+      :root {
+        --primary-color: #2563eb;
+        --secondary-color: #f9ba19;
+        --dark-color: #1e293b;
+        --light-color: #f8fafc;
+      }
+
+      body {
+        font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+        background-color: var(--light-color);
+      }
+    .navbar-custom {
+        position: sticky;
+        top: 0;
+        z-index: 1030;
+        background-color: #ffffff !important;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease-in-out;
+      }
+
+      .navbar-brand img {
+        transition: transform 0.3s ease;
+      }
+
+      .navbar-brand img:hover {
+        transform: scale(1.05);
+      }
+
+      .nav-link {
+        font-weight: 500;
+        transition: color 0.2s ease;
+      }
+
+      .nav-link:hover {
+        color: #0d6efd;
+      }
+      .hero-video {
+        width: 100%;
+        height: auto;
+        max-height: 70vh;
+        object-fit: cover;
+        border-radius: 0 0 12px 12px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      }
+
+      .section-title {
+        position: relative;
+        padding-bottom: 1rem;
+        margin: 3rem 0;
+        text-align: center;
+        color: var(--dark-color);
+      }
+
+      .section-title:after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80px;
+        height: 4px;
+        background: var(--secondary-color);
+        border-radius: 2px;
+      }
+
+      .credit-card {
+        border: none;
+        border-radius: 12px;
+        overflow: hidden;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+        height: 100%;
+        background-color: white;
+      }
+
+      .credit-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
+      }
+
+      .card-img-container {
+        padding: 1.5rem;
+        display: flex;
+        justify-content: center;
+      }
+
+      .card-img {
+        width: 180px;
+        height: 180px;
+        object-fit: cover;
+        border: 4px solid var(--secondary-color);
+        transition: transform 0.3s ease;
+      }
+
+      .credit-card:hover .card-img {
+        transform: scale(1.05);
+      }
+
+      .card-title {
+        font-weight: 700;
+        color: var(--secondary-color);
+        margin-bottom: 1rem;
+        font-size: 1.5rem;
+      }
+
+      .card-text {
+        color: #64748b;
+        margin-bottom: 1.5rem;
+        padding: 0 1.5rem;
+      }
+
+      .btn-credit {
+        background-color: var(--primary-color);
+        color: white;
+        border: none;
+        padding: 0.5rem 1.5rem;
+        border-radius: 25px;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        margin-bottom: 1.5rem;
+      }
+
+      .btn-credit:hover {
+        background-color: #1d4ed8;
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(37, 99, 235, 0.3);
+      }
+
+      .benefits-list {
+        text-align: left;
+        padding: 0 2rem 1.5rem;
+      }
+
+      .benefits-list li {
+        margin-bottom: 0.5rem;
+        display: flex;
+        align-items: flex-start;
+      }
+
+      .benefits-list i {
+        color: var(--secondary-color);
+        margin-right: 0.5rem;
+        margin-top: 0.2rem;
+      }
+
+      @media (max-width: 768px) {
+        .card-img {
+          width: 140px;
+          height: 140px;
+        }
+
+        .section-title {
+          font-size: 1.8rem;
+        }
+      }
+
+      .service-card {
+          transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .service-card:hover {
+          transform: translateY(-8px);
+          box-shadow: 0 12px 20px rgba(0, 0, 0, 0.1);
+        }
+
+    </style>
+  </head>
+  <nav class="navbar navbar-expand-lg navbar-custom">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img src="https://static.wixstatic.com/media/0bf950_155f8cd81f6d4fe5ac3419b8e0397b40~mv2.png/v1/crop/x_0,y_260,w_6000,h_2480/fill/w_381,h_158,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/LOGO%20SIN%20FONDO%20OFICIAL.png" height="80" width="170" alt="Logo">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Crédito comunal solidario</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Crédito individual</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Sobre nosotros</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Sociales
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Facebook</a></li>
+              <li><a class="dropdown-item" href="#">Instagram</a></li>
+              <li><a class="dropdown-item" href="#">Whatsapp</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="#">Artixan</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <body>
+    <section class="hero-section">
+      <div class="container-fluid px-0">
+        <video class="hero-video" autoplay muted loop>
+          <source src="../assets/file.mp4" type="video/mp4">
+          Tu navegador no soporta videos HTML5
+        </video>
+      </div>
+    </section>
+
+    <section class="credit-types py-5">
+      <div class="container">
+        <h2 class="section-title display-5 fw-bold">Nuestros Tipos de Crédito</h2>
+
+        <div class="row g-4">
+           Comunal Credit Card 
+          <div class="col-lg-6 col-md-6">
+            <div class="credit-card">
+              <div class="card-img-container">
+                <img src="../assets/grupos.png" class="card-img rounded-circle" alt="Grupo de personas">
+              </div>
+              <div class="card-body text-center">
+                <h3 class="card-title">Crédito Comunal Solidario</h3>
+                <p class="card-text">Financiamiento diseñado para grupos organizados que buscan crecimiento colectivo con responsabilidad compartida.</p>
+                <ul class="benefits-list">
+                  <li><i class="fas fa-check-circle"></i> Tasas preferenciales para grupos</li>
+                  <li><i class="fas fa-check-circle"></i> Garantía solidaria</li>
+                  <li><i class="fas fa-check-circle"></i> Capacitación financiera incluida</li>
+                </ul>
+                <button class="btn btn-credit">
+                  <i class="fas fa-info-circle me-2"></i>Conocer más
+                </button>
+              </div>
+            </div>
+          </div>
+
+           Individual Credit Card 
+          <div class="col-lg-6 col-md-6">
+            <div class="credit-card">
+              <div class="card-img-container">
+                <img src="../assets/persona.png" class="card-img rounded-circle" alt="Persona individual">
+              </div>
+              <div class="card-body text-center">
+                <h3 class="card-title">Crédito Individual</h3>
+                <p class="card-text">Solución personalizada para tus proyectos personales o empresariales con condiciones adaptadas a tus necesidades.</p>
+                <ul class="benefits-list">
+                  <li><i class="fas fa-check-circle"></i> Montos según tu capacidad</li>
+                  <li><i class="fas fa-check-circle"></i> Plazos flexibles</li>
+                  <li><i class="fas fa-check-circle"></i> Desembolso rápido</li>
+                </ul>
+                <button class="btn btn-credit">
+                  <i class="fas fa-info-circle me-2"></i>Conocer más
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+       Otros Servicios 
+      <section class="otros-servicios py-5 bg-light">
+        <div class="container">
+          <h2 class="text-center fw-bold mb-4">Otros Servicios</h2>
+          <div class="row g-4 justify-content-center">
+            
+             Servicio 1 
+            <div class="col-md-4">
+              <div class="service-card text-center p-4 shadow-sm rounded bg-white h-100">
+                <i class="fas fa-file-invoice-dollar fa-2x mb-3 text-warning"></i>
+                <h5 class="fw-semibold">Pago de servicios</h5>
+                <p class="text-muted">Realiza pagos de luz, agua, teléfono y más en nuestras sucursales.</p>
+              </div>
+            </div>
+
+             Servicio 2 
+            <div class="col-md-4">
+              <div class="service-card text-center p-4 shadow-sm rounded bg-white h-100">
+                <i class="fas fa-hand-holding-usd fa-2x mb-3 text-warning"></i>
+                <h5 class="fw-semibold">Remesas</h5>
+                <p class="text-muted">Recibe y envía dinero a nivel nacional e internacional.</p>
+              </div>
+            </div>
+
+             Servicio 3 
+            <div class="col-md-4">
+              <div class="service-card text-center p-4 shadow-sm rounded bg-white h-100">
+                <i class="fas fa-mobile-alt fa-2x mb-3 text-warning"></i>
+                <h5 class="fw-semibold">Recarga de tiempo aire</h5>
+                <p class="text-muted">Realiza recargas para todas las compañías en nuestras sucursales.</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+
+     Preguntas Frecuentes
+    <section class="faq py-5 bg-light">
+      <div class="container">
+        <h2 class="section-title display-5 fw-bold">Preguntas Frecuentes</h2>
+        <div class="accordion" id="accordionExample">
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+                ¿Qué necesito para solicitar un crédito?
+              </button>
+            </h2>
+            <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                Necesitas contar con identificación oficial, comprobante de domicilio y demostrar tu capacidad de pago.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+                ¿Cuánto tiempo tarda la aprobación?
+              </button>
+            </h2>
+            <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                Generalmente el proceso tarda entre 24 a 48 horas, dependiendo de la documentación y verificación.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">
+                ¿Puedo liquidar mi crédito antes del plazo?
+              </button>
+            </h2>
+            <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                Sí, puedes realizar pagos anticipados sin penalización y así reducir intereses.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+        Bootstrap JS Bundle 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+
+  <footer>
+<p class="text-center">    © 2025 Vamos A Mejorar S.A de C.V SOFOM E.N.R. Todos los derechos reservados.</p>
+
+  </footer>
+</html>
+
+
+
+
+ -->
