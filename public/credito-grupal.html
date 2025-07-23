@@ -1,0 +1,905 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <style>
+         :root {
+            --primary-color: #547ed979;
+            --secondary-color: #f9ba19;
+            --dark-color: #1e293b;
+            --light-color: #f8fafc;
+            }
+
+            html, body {
+                margin: 0;
+                padding: 0;
+                height: 100%;
+            }
+            
+
+            .section-title {
+            position: relative;
+            padding-bottom: 1rem;
+            margin: 3rem 0;
+            text-align: center;
+            color: var(--dark-color);
+            }
+
+            .section-title:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: var(--secondary-color);
+            border-radius: 2px;
+            }
+
+
+            @media (max-width: 768px) {
+            .card-img {
+            width: 140px;
+            height: 140px;
+            }
+
+            .section-title {
+            font-size: 1.8rem;
+            }
+            }
+
+            .service-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            }
+
+            .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 20px rgba(0, 0, 0, 0.1);
+            }
+
+                /* Animaciones personalizadas */
+            @keyframes fadeInUp {
+                from {
+                opacity: 0;
+                transform: translateY(20px);
+                }
+                to {
+                opacity: 1;
+                transform: translateY(0);
+                }
+            }
+            
+            @keyframes pulse {
+                0% { transform: scale(1); }
+                50% { transform: scale(1.03); }
+                100% { transform: scale(1); }
+            }
+            
+            @keyframes borderGlow {
+                0% { box-shadow: 0 0 0 0 rgba(52, 188, 10, 0.4); }
+                100% { box-shadow: 0 0 0 10px rgba(52, 188, 10, 0); }
+            }
+            
+            /* Estilos para las tarjetas animadas */
+            .service-card {
+                transition: all 0.4s ease;
+                animation: fadeInUp 0.6s ease forwards;
+                opacity: 0;
+            }
+            
+            /* Retrasos para animación escalonada */
+            .service-card:nth-child(1) { animation-delay: 0.2s; }
+            .service-card:nth-child(2) { animation-delay: 0.4s; }
+            .service-card:nth-child(3) { animation-delay: 0.6s; }
+            
+            .service-card:hover {
+                transform: translateY(-8px) scale(1.02);
+                box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1) !important;
+            }
+            
+            .card-icon {
+                transition: all 0.3s ease;
+            }
+            
+            .service-card:hover .card-icon {
+                animation: pulse 1.5s infinite;
+            }
+            
+            .btn-hover-grow {
+                transition: all 0.3s ease;
+            }
+            
+            .btn-hover-grow:hover {
+                transform: scale(1.05);
+            }
+            
+            /* Efecto especial para la tarjeta de beneficios */
+            .benefits-card:hover {
+                animation: borderGlow 1.5s ease infinite;
+            }
+
+                .video-container {
+                position: relative;
+                width: 100%;
+                height: 100vh; /* altura igual a la pantalla */
+                overflow: hidden;
+            }
+
+            .video-container video {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                min-width: 100%;
+                min-height: 100%;
+                transform: translate(-50%, -50%);
+                object-fit: cover;
+            }
+
+
+            .modern-footer {
+                background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+                border-top: 1px solid rgba(0, 0, 0, 0.05);
+                position: relative;
+                overflow: hidden;
+            }
+
+            .modern-footer::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: linear-gradient(45deg, rgba(108, 92, 231, 0.1) 0%, rgba(0, 0, 0, 0) 100%);
+                z-index: 1;
+            }
+
+            .footer-content {
+                position: relative;
+                z-index: 2;
+            }
+
+            .footer-logo {
+                font-size: 1.8rem;
+                font-weight: 700;
+                color: #2d3436;
+                text-decoration: none;
+            }
+
+            .footer-title {
+                color: #2d3436;
+                font-weight: 600;
+                font-size: 1.2rem;
+                margin-bottom: 1.5rem;
+                position: relative;
+                display: inline-block;
+            }
+
+            .footer-title::after {
+                content: '';
+                position: absolute;
+                left: 0;
+                bottom: -5px;
+                width: 100%;
+                height: 2px;
+                background: linear-gradient(90deg, #5271d7, transparent);
+            }
+
+            .contact-info {
+                list-style: none;
+                padding: 0;
+            }
+
+            .contact-info li {
+                margin-bottom: 1rem;
+                display: flex;
+                align-items: center;
+                gap: 10px;
+            }
+
+            .contact-info i {
+                color: #3b80f6;
+                width: 20px;
+            }
+
+            .social-links {
+                display: flex;
+                gap: 15px;
+            }
+
+            .social-icon {
+                width: 40px;
+                height: 40px;
+                border-radius: 10px;
+                background: white;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: #2d3436;
+                text-decoration: none;
+                transition: all 0.3s ease;
+                box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            }
+
+            .social-icon:hover {
+                transform: translateY(-3px);
+                color: #4ea0ee;
+                box-shadow: 0 5px 15px rgba(108, 92, 231, 0.2);
+            }
+
+            .quick-links {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1rem;
+                padding: 0;
+                list-style: none;
+            }
+
+            .quick-links a {
+                color: #2d3436;
+                text-decoration: none;
+                transition: all 0.3s ease;
+                display: flex;
+                align-items: center;
+                gap: 5px;
+            }
+
+            .quick-links a:hover {
+                color: #214aaa;
+                transform: translateX(5px);
+            }
+
+            .quick-links a::before {
+                content: '→';
+                opacity: 0;
+                transition: all 0.3s ease;
+            }
+
+            .quick-links a:hover::before {
+                opacity: 1;
+            }
+
+            .newsletter-input {
+                border: none;
+                padding: 0.8rem;
+                border-radius: 10px;
+                box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            }
+
+            .btn-subscribe {
+                background: linear-gradient(45deg, #45aafc, #45aafc);
+                border: none;
+                box-shadow: 0 2px 10px rgba(108, 92, 231, 0.2);
+                padding: 0.8rem 2rem;
+                border-radius: 10px;
+                transition: all 0.3s ease;
+            }
+
+            .btn-subscribe:hover {
+                transform: translateY(-2px);
+                box-shadow: 0 5px 15px rgba(108, 92, 231, 0.3);
+            }
+
+            .footer-bottom {
+                background: white;
+                border-top: 1px solid rgba(0, 0, 0, 0.05);
+            }
+
+            .footer-bottom p {
+                margin: 0;
+                color: #6c757d;
+            }
+
+            .footer-bottom a {
+                color: #45aafc;
+                text-decoration: none;
+            }
+
+            .footer-bottom a:hover {
+                text-decoration: underline;
+            }
+
+            @media (max-width: 768px) {
+                .quick-links {
+                    grid-template-columns: 1fr;
+                }
+            }
+
+            .branch-card {
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+                border-radius: 0.5rem;
+            }
+            
+            .branch-card:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
+            }
+            
+            .branch-info {
+                background-color: #fff;
+            }
+            
+            .branch-map {
+                background-color: #f8f9fa;
+            }
+            
+            .branch-badge {
+                display: inline-block;
+                padding: 0.35rem 0.75rem;
+                border-radius: 50rem;
+                font-size: 1rem;
+                font-weight: 600;
+            }
+            
+            .schedule-box {
+                border-left: 3px solid #0d6efd;
+            }
+            
+            .schedule-item {
+                border-bottom: 1px dashed #dee2e6;
+                padding-bottom: 0.5rem;
+            }
+            
+            .schedule-item:last-child {
+                border-bottom: none;
+                padding-bottom: 0;
+            }
+            
+            .divider {
+                width: 80px;
+                height: 3px;
+                opacity: 0.7;
+            }
+            
+            @media (max-width: 767.98px) {
+                .branch-card .row {
+                flex-direction: column-reverse;
+                }
+                
+                .branch-info, .branch-map {
+                width: 100%;
+                }
+                
+                .branch-map {
+                height: 250px;
+                }
+            }
+            .navbar.sticky-top {
+            top: 0;
+            z-index: 1030; /* más alto que otros elementos */
+            }
+            .custom-hr {
+            height: 5px;
+            width: 290px;
+            background-color: #ffd000;
+            border: none;
+            border-radius: 10px;
+            margin: 0 auto;
+            }
+
+    </style>
+</head>
+  <nav class="navbar navbar-expand-lg bg-white shadow-sm sticky-top align-content-xl-center">
+    <div class="container-fluid px-4">
+      <a class="navbar-brand" href="#">
+        <img src="https://static.wixstatic.com/media/0bf950_155f8cd81f6d4fe5ac3419b8e0397b40~mv2.png/v1/crop/x_0,y_260,w_6000,h_2480/fill/w_508,h_210,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/LOGO%20SIN%20FONDO%20OFICIAL.png" alt="logo" height="60">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+        <ul class="navbar-nav" >
+          <li class="nav-item">
+            <a class="nav-link fw-semibold" href="./inicio.html">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fw-semibold" href="./credito-grupal.html">Crédito Grupal</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fw-semibold" href="./credito-individual.html">Crédito Individual</a>
+          </li>
+
+          <!-- Mega Dropdown -->
+          <li class="nav-item dropdown position-static">
+            <a class="nav-link dropdown-toggle fw-semibold" href="#" id="megaMenu" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Sociales
+            </a>
+            <div class="dropdown-menu w-100 mt-0 border-0 shadow-lg p-4 rounded-3" aria-labelledby="megaMenu" style="min-width: 600px;">
+              <div class="row">
+                <div class="col-md-6">
+                  <h6 class="fw-bold text-dark mb-3">Redes Sociales</h6>
+                  <a class="dropdown-item mb-2" href="https://www.facebook.com/financiera.vam?locale=es_LA"><i class="fa-brands fa-facebook me-2 text-primary"></i> Facebook</a>
+                  <a class="dropdown-item mb-2" href="https://api.whatsapp.com/message/CD27WLZQZSXIJ1?autoload=1&app_absent=0"><i class="fa-brands fa-whatsapp me-2 text-success"></i> Whatsapp</a>
+                  <a class="dropdown-item mb-2" href="https://www.instagram.com/vamosamejora.r/?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw%3D%3D#"><i class="fa-brands fa-instagram me-2" style="color: #ff0088;"></i> Instagram</a>
+                </div>
+                <div class="col-md-6">
+                  <h6 class="fw-bold text-dark mb-3">Conocer más</h6>
+                  <a class="dropdown-item mb-2" href="nosotros.html"><i class="fas fa-users me-2 text-info"></i> Sobre Nosotros</a>
+                  <a class="dropdown-item mb-2" href="testimonios.html"><i class="fas fa-layer-group me-2 text-secondary"></i> Testimonios</a>
+                  <a class="dropdown-item mb-2" href="bolsatrabjo.html"><i class="fas fa-cubes me-2 text-danger"></i> Bolsa de Trabajo</a>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <body>
+
+    <body class="bg-light">
+  <!-- Hero Section -->
+  <div class="bg-primary text-white py-5">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-8 text-center">
+          <h1 class="display-4 fw-bold mb-4">Crédito Grupal Solidario</h1>
+          <div class="d-flex justify-content-center mb-4">
+            <div class="border-top border-white border-3" style="width: 200px;"></div>
+          </div>
+          <p class="lead mb-5">
+            Apoyo financiero para grupos que se unen para progresar. Basado en la solidaridad y apoyo mutuo para impulsar tus proyectos productivos o comerciales.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Descripción -->
+  <div class="container my-5 py-4">
+    <div class="row justify-content-center">
+      <div class="col-lg-10">
+        <div class="card border-0 shadow-sm">
+          <div class="card-body p-4 p-md-5">
+            <p class="fs-5 text-muted">
+              El microcrédito comunal es aquel que se otorga a un grupo de personas auto seleccionable, basado en la solidaridad, apoyo mutuo y capacidad de pago, que cuentan con una actividad productiva, comercial o de servicios propia e independiente o con una actividad por iniciar, con el fin de mejorar sus ingresos y su nivel de vida.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Beneficios -->
+  <div class="container py-5">
+    <div class="text-center mb-5">
+      <h2 class="fw-bold display-6 mb-3">Beneficios que te ofrecemos</h2>
+      <p class="text-muted lead">Todo lo que necesitas para hacer crecer tu negocio o proyecto</p>
+    </div>
+    
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+      <!-- Beneficio 1 -->
+      <div class="col">
+        <div class="card h-100 border-0 rounded-4 shadow-sm hover-effect">
+          <div class="card-body p-4 text-center">
+            <div class="icon-bg-primary mb-4 mx-auto rounded-3 d-flex align-items-center justify-content-center" style="width: 70px; height: 70px;">
+              <i class="fa-solid fa-money-bill-wave fa-xl text-white"></i>
+            </div>
+            <h5 class="fw-semibold">Monto disponible</h5>
+            <p class="text-muted">Desde $4,000 hasta $80,000 pesos</p>
+            <div class="badge bg-primary bg-opacity-10 text-primary">Popular</div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Beneficio 2 -->
+      <div class="col">
+        <div class="card h-100 border-0 rounded-4 shadow-sm hover-effect">
+          <div class="card-body p-4 text-center">
+            <div class="icon-bg-warning mb-4 mx-auto rounded-3 d-flex align-items-center justify-content-center" style="width: 70px; height: 70px;">
+              <i class="fa-solid fa-percent fa-xl text-white"></i>
+            </div>
+            <h5 class="fw-semibold">Tasa baja</h5>
+            <p class="text-muted">Intereses competitivos en el mercado</p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Beneficio 3 -->
+      <div class="col">
+        <div class="card h-100 border-0 rounded-4 shadow-sm hover-effect">
+          <div class="card-body p-4 text-center">
+            <div class="icon-bg-danger mb-4 mx-auto rounded-3 d-flex align-items-center justify-content-center" style="width: 70px; height: 70px;">
+              <i class="fa-solid fa-gift fa-xl text-white"></i>
+            </div>
+            <h5 class="fw-semibold">Regalos especiales</h5>
+            <p class="text-muted">En regreso a clases y Navidad</p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Beneficio 4 -->
+      <div class="col">
+        <div class="card h-100 border-0 rounded-4 shadow-sm hover-effect">
+          <div class="card-body p-4 text-center">
+            <div class="icon-bg-orange mb-4 mx-auto rounded-3 d-flex align-items-center justify-content-center" style="width: 70px; height: 70px;">
+              <i class="fa-solid fa-hand-holding-dollar fa-xl text-white"></i>
+            </div>
+            <h5 class="fw-semibold">Bonos de recomendación</h5>
+            <p class="text-muted">Gana por referir a amigos</p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Beneficio 5 -->
+      <div class="col">
+        <div class="card h-100 border-0 rounded-4 shadow-sm hover-effect">
+          <div class="card-body p-4 text-center">
+            <div class="icon-bg-success mb-4 mx-auto rounded-3 d-flex align-items-center justify-content-center" style="width: 70px; height: 70px;">
+              <i class="fa-solid fa-house-chimney fa-xl text-white"></i>
+            </div>
+            <h5 class="fw-semibold">Atención a domicilio</h5>
+            <p class="text-muted">Hasta la puerta de tu cashpak</p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Beneficio 6 -->
+      <div class="col">
+        <div class="card h-100 border-0 rounded-4 shadow-sm hover-effect">
+          <div class="card-body p-4 text-center">
+            <div class="icon-bg-danger mb-4 mx-auto rounded-3 d-flex align-items-center justify-content-center" style="width: 70px; height: 70px;">
+              <i class="fa-solid fa-heart-pulse fa-xl text-white"></i>
+            </div>
+            <h5 class="fw-semibold">Microseguro de vida</h5>
+            <p class="text-muted">Protección para ti y tu familia</p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Beneficio 7 -->
+      <div class="col">
+        <div class="card h-100 border-0 rounded-4 shadow-sm hover-effect">
+          <div class="card-body p-4 text-center">
+            <div class="icon-bg-info mb-4 mx-auto rounded-3 d-flex align-items-center justify-content-center" style="width: 70px; height: 70px;">
+              <i class="fa-solid fa-handshake fa-xl text-white"></i>
+            </div>
+            <h5 class="fw-semibold">Sin comisión</h5>
+            <p class="text-muted">Por apertura de crédito</p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Beneficio 8 -->
+      <div class="col">
+        <div class="card h-100 border-0 rounded-4 shadow-sm hover-effect">
+          <div class="card-body p-4 text-center">
+            <div class="icon-bg-success mb-4 mx-auto rounded-3 d-flex align-items-center justify-content-center" style="width: 70px; height: 70px;">
+              <i class="fa-solid fa-rotate-right fa-xl text-white"></i>
+            </div>
+            <h5 class="fw-semibold">Renovación inmediata</h5>
+            <p class="text-muted">Rápido y sin complicaciones</p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Beneficio 9 -->
+      <div class="col">
+        <div class="card h-100 border-0 rounded-4 shadow-sm hover-effect">
+          <div class="card-body p-4 text-center">
+            <div class="icon-bg-purple mb-4 mx-auto rounded-3 d-flex align-items-center justify-content-center" style="width: 70px; height: 70px;">
+              <i class="fa-solid fa-book-open-reader fa-xl text-white"></i>
+            </div>
+            <h5 class="fw-semibold">Educación financiera</h5>
+            <p class="text-muted">Para ti y tus hijos</p>
+            <div class="badge bg-purple bg-opacity-10 text-purple">Nuevo</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Requisitos -->
+  <div class="bg-light py-5">
+    <div class="container py-4">
+      <div class="text-center mb-5">
+        <h2 class="fw-bold display-6 mb-3">Requisitos para solicitar</h2>
+        <p class="text-muted lead">Lo básico que necesitas para formar tu grupo</p>
+      </div>
+      
+      <div class="row g-4">
+        <!-- Requisito 1 -->
+        <div class="col-md-6 col-lg-3">
+          <div class="card h-100 border-0 rounded-4 shadow-sm">
+            <div class="card-body p-4">
+              <div class="d-flex align-items-start">
+                <div class="me-3 text-primary">
+                  <i class="fa-solid fa-people-group fa-2x"></i>
+                </div>
+                <div>
+                  <h5 class="fw-semibold mb-3">Grupo de 10 personas</h5>
+                  <p class="text-muted mb-0">El grupo comunal debe estar conformado por mínimo 10 integrantes</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Requisito 2 -->
+        <div class="col-md-6 col-lg-3">
+          <div class="card h-100 border-0 rounded-4 shadow-sm">
+            <div class="card-body p-4">
+              <div class="d-flex align-items-start">
+                <div class="me-3 text-success">
+                  <i class="fa-solid fa-user-group fa-2x"></i>
+                </div>
+                <div>
+                  <h5 class="fw-semibold mb-3">Conocidos y establecidos</h5>
+                  <p class="text-muted mb-0">Personas que se conozcan y con confianza mutua en la misma zona</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Requisito 3 -->
+        <div class="col-md-6 col-lg-3">
+          <div class="card h-100 border-0 rounded-4 shadow-sm">
+            <div class="card-body p-4">
+              <div class="d-flex align-items-start">
+                <div class="me-3 text-info">
+                  <i class="fa-solid fa-dollar-sign fa-2x"></i>
+                </div>
+                <div>
+                  <h5 class="fw-semibold mb-3">Actividad económica</h5>
+                  <p class="text-muted mb-0">Actividad productiva existente o por iniciar</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Requisito 4 -->
+        <div class="col-md-6 col-lg-3">
+          <div class="card h-100 border-0 rounded-4 shadow-sm">
+            <div class="card-body p-4">
+              <div class="d-flex align-items-start">
+                <div class="me-3 text-warning">
+                  <i class="fa-solid fa-handshake fa-2x"></i>
+                </div>
+                <div>
+                  <h5 class="fw-semibold mb-3">Necesidades en común</h5>
+                  <p class="text-muted mb-0">Proyectos o necesidades compartidas</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Documentación -->
+  <div class="container py-5 my-4">
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <div class="text-center mb-5">
+          <h2 class="fw-bold display-6 mb-3">Documentación Requerida</h2>
+          <p class="text-muted lead">Prepara estos documentos para agilizar tu trámite</p>
+        </div>
+        
+        <div class="card border-0 shadow-sm">
+          <div class="card-body p-0">
+            <div class="list-group list-group-flush">
+              <div class="list-group-item p-4">
+                <div class="d-flex align-items-center">
+                  <div class="bg-primary bg-opacity-10 text-primary rounded-3 p-2 me-3">
+                    <i class="fa-solid fa-id-card"></i>
+                  </div>
+                  <div>
+                    <h6 class="mb-0 fw-semibold">Identificación oficial</h6>
+                    <small class="text-muted">Credencial del INE o pasaporte vigente</small>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="list-group-item p-4">
+                <div class="d-flex align-items-center">
+                  <div class="bg-primary bg-opacity-10 text-primary rounded-3 p-2 me-3">
+                    <i class="fa-solid fa-file-invoice"></i>
+                  </div>
+                  <div>
+                    <h6 class="mb-0 fw-semibold">Comprobante de domicilio</h6>
+                    <small class="text-muted">Agua, luz, telefonía o gas natural (no mayor a 2 meses)</small>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="list-group-item p-4">
+                <div class="d-flex align-items-center">
+                  <div class="bg-primary bg-opacity-10 text-primary rounded-3 p-2 me-3">
+                    <i class="fa-solid fa-file-contract"></i>
+                  </div>
+                  <div>
+                    <h6 class="mb-0 fw-semibold">CURP</h6>
+                    <small class="text-muted">Clave Única de Registro de Población</small>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="list-group-item p-4">
+                <div class="d-flex align-items-center">
+                  <div class="bg-primary bg-opacity-10 text-primary rounded-3 p-2 me-3">
+                    <i class="fa-solid fa-certificate"></i>
+                  </div>
+                  <div>
+                    <h6 class="mb-0 fw-semibold">Acta de Nacimiento</h6>
+                    <small class="text-muted">Documento oficial</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Estilos adicionales -->
+  <style>
+    .hover-effect {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .hover-effect:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
+    }
+    .icon-bg-primary {
+      background-color: rgba(13, 110, 253, 0.2);
+    }
+    .icon-bg-success {
+      background-color: rgba(25, 135, 84, 0.2);
+    }
+    .icon-bg-danger {
+      background-color: rgba(220, 53, 69, 0.2);
+    }
+    .icon-bg-warning {
+      background-color: rgba(255, 193, 7, 0.2);
+    }
+    .icon-bg-info {
+      background-color: rgba(13, 202, 240, 0.2);
+    }
+    .icon-bg-orange {
+      background-color: rgba(253, 126, 20, 0.2);
+    }
+    .icon-bg-purple {
+      background-color: rgba(111, 66, 193, 0.2);
+    }
+    .text-purple {
+      color: #6f42c1;
+    }
+    .bg-purple {
+      background-color: #6f42c1;
+    }
+  </style>
+<div class="disclaimer-section bg-light py-3 mt-4">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-10">
+        <div class="d-flex flex-column flex-md-row align-items-center justify-content-between">
+          <p class="legal-disclaimer mb-2 mb-md-0">
+            <i class="fas fa-info-circle text-primary me-2"></i>
+            <span class="fw-light">* Tasa de interés anual desde 60% tasa fija. CAT promedio 16 semanas.</span>
+          </p>
+          <a href="costos-comisiones.html" target="_blank" class="btn btn-link btn-sm text-decoration-none fw-bold">
+            <span class="d-flex align-items-center">
+              <span class="me-2">Consulta CAT y comisiones</span>
+              <i class="fas fa-external-link-alt fa-sm"></i>
+            </span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  .disclaimer-section {
+    border-top: 1px solid rgba(0,0,0,0.05);
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+    background-color: #f8f9fa;
+  }
+  
+  .legal-disclaimer {
+    font-size: 0.85rem;
+    color: #6c757d;
+  }
+  
+  .btn-link {
+    color: #0d6efd;
+    transition: all 0.2s ease;
+    padding: 0.25rem 0.5rem;
+  }
+  
+  .btn-link:hover {
+    color: #0a58ca;
+    transform: translateX(3px);
+  }
+  
+  @media (max-width: 767.98px) {
+    .disclaimer-section {
+      text-align: center;
+    }
+    
+    .legal-disclaimer {
+      margin-bottom: 0.5rem !important;
+    }
+  }
+</style>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+</body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+  </body>
+
+        <footer class="modern-footer pt-5">
+        <div class="container footer-content">
+            <div class="row g-4 mb-5">
+                <!-- Company Info -->
+                <div class="col-lg-4 col-md-6">
+                    <a href="#" class="footer-logo d-block mb-4">
+                        <img src="https://static.wixstatic.com/media/0bf950_155f8cd81f6d4fe5ac3419b8e0397b40~mv2.png/v1/crop/x_0,y_260,w_6000,h_2480/fill/w_508,h_210,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/LOGO%20SIN%20FONDO%20OFICIAL.png" alt="logo" width="120" height="50" >
+                    </a>
+                    <p class="text-muted mb-4">
+                        VAMOS A MEJORAR
+                        es una empresa mexicana dedicada al otorgamiento de servicios financieros para micro empresas con la convicción de crecimiento Laboral y Personal
+                    </p>
+                    <ul class="contact-info mb-4">
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Rivera del Río #65 Int B - 3 Plaza Patria Zona Centro, C.P. 37800, Dolores Hidalgo, Guanajuato</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <span>(+52) 4181544583</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <span>vamosamejorar@vamosamejorar.com</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="col-lg-4 col-md-6">
+                    <h3 class="footer-title">Links rápidos</h3>
+                    <ul class="quick-links">
+                        <li><a href="#">Aviso de privacidad</a></li>
+                        <li><a href="#">Unidad Especializada</a></li>
+                        <li><a href="#">Costos y Comisiones de nuestros productos</a></li>
+                        <li><a href="#">Condusef</a></li>
+                        <li><a href="#">Buro de entidades financieras</a></li>
+                        <li><a href="#">Términos y condiciones</a></li>
+                    </ul>
+                </div>
+
+                <!-- Newsletter -->
+                <div class="col-lg-4 col-md-12">
+                    <h3 class="footer-title">Mantente conectado</h3>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/financiera.vam" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/vamosamejora.r?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="https://wa.me/5214181544583?text=Quiero%20m%C3%A1s%20informaci%C3%B3n%20para%20solicitar%20mi%20cr%C3%A9dito" class="social-icon"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="row py-4">
+                    <div class="col-md-6 text-center text-md-start">
+                        <p>&copy; 2025 VAMOS A MEJORAR S.A. DE C.V. SOFOM. E.N.R. Todos los derechos reservados.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</html>
