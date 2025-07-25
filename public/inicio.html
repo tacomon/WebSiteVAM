@@ -209,377 +209,397 @@
   } */
 
 
-  .modern-footer {
-    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-    border-top: 1px solid rgba(0, 0, 0, 0.05);
-    position: relative;
-    overflow: hidden;
-}
-
-.modern-footer::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(45deg, rgba(108, 92, 231, 0.1) 0%, rgba(0, 0, 0, 0) 100%);
-    z-index: 1;
-}
-
-.footer-content {
-    position: relative;
-    z-index: 2;
-}
-
-.footer-logo {
-    font-size: 1.8rem;
-    font-weight: 700;
-    color: #2d3436;
-    text-decoration: none;
-}
-
-.footer-title {
-    color: #2d3436;
-    font-weight: 600;
-    font-size: 1.2rem;
-    margin-bottom: 1.5rem;
-    position: relative;
-    display: inline-block;
-}
-
-.footer-title::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: -5px;
-    width: 100%;
-    height: 2px;
-    background: linear-gradient(90deg, #5271d7, transparent);
-}
-
-.contact-info {
-    list-style: none;
-    padding: 0;
-}
-
-.contact-info li {
-    margin-bottom: 1rem;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.contact-info i {
-    color: #3b80f6;
-    width: 20px;
-}
-
-.social-links {
-    display: flex;
-    gap: 15px;
-}
-
-.social-icon {
-    width: 40px;
-    height: 40px;
-    border-radius: 10px;
-    background: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #2d3436;
-    text-decoration: none;
-    transition: all 0.3s ease;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-}
-
-.social-icon:hover {
-    transform: translateY(-3px);
-    color: #4ea0ee;
-    box-shadow: 0 5px 15px rgba(108, 92, 231, 0.2);
-}
-
-.quick-links {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
-    padding: 0;
-    list-style: none;
-}
-
-.quick-links a {
-    color: #2d3436;
-    text-decoration: none;
-    transition: all 0.3s ease;
-    display: flex;
-    align-items: center;
-    gap: 5px;
-}
-
-.quick-links a:hover {
-    color: #214aaa;
-    transform: translateX(5px);
-}
-
-.quick-links a::before {
-    content: '→';
-    opacity: 0;
-    transition: all 0.3s ease;
-}
-
-.quick-links a:hover::before {
-    opacity: 1;
-}
-
-.newsletter-input {
-    border: none;
-    padding: 0.8rem;
-    border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-}
-
-.btn-subscribe {
-    background: linear-gradient(45deg, #45aafc, #45aafc);
-    border: none;
-    box-shadow: 0 2px 10px rgba(108, 92, 231, 0.2);
-    padding: 0.8rem 2rem;
-    border-radius: 10px;
-    transition: all 0.3s ease;
-}
-
-.btn-subscribe:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(108, 92, 231, 0.3);
-}
-
-.footer-bottom {
-    background: white;
-    border-top: 1px solid rgba(0, 0, 0, 0.05);
-}
-
-.footer-bottom p {
-    margin: 0;
-    color: #6c757d;
-}
-
-.footer-bottom a {
-    color: #45aafc;
-    text-decoration: none;
-}
-
-.footer-bottom a:hover {
-    text-decoration: underline;
-}
-
-@media (max-width: 768px) {
-    .quick-links {
-        grid-template-columns: 1fr;
+    .modern-footer {
+      background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+      border-top: 1px solid rgba(0, 0, 0, 0.05);
+      position: relative;
+      overflow: hidden;
     }
-}
 
-  .branch-card {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border-radius: 0.5rem;
-  }
-  
-  .branch-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
-  }
-  
-  .branch-info {
-    background-color: #fff;
-  }
-  
-  .branch-map {
-    background-color: #f8f9fa;
-  }
-  
-  .branch-badge {
-    display: inline-block;
-    padding: 0.35rem 0.75rem;
-    border-radius: 50rem;
-    font-size: 1rem;
-    font-weight: 600;
-  }
-  
-  .schedule-box {
-    border-left: 3px solid #0d6efd;
-  }
-  
-  .schedule-item {
-    border-bottom: 1px dashed #dee2e6;
-    padding-bottom: 0.5rem;
-  }
-  
-  .schedule-item:last-child {
-    border-bottom: none;
-    padding-bottom: 0;
-  }
-  
-  .divider {
-    width: 80px;
-    height: 3px;
-    opacity: 0.7;
-  }
-  
-  @media (max-width: 767.98px) {
-    .branch-card .row {
-      flex-direction: column-reverse;
-    }
-    
-    .branch-info, .branch-map {
+    .modern-footer::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
       width: 100%;
+      height: 100%;
+      background: linear-gradient(45deg, rgba(108, 92, 231, 0.1) 0%, rgba(0, 0, 0, 0) 100%);
+      z-index: 1;
     }
-    
+
+    .footer-content {
+      position: relative;
+      z-index: 2;
+    }
+
+    .footer-logo {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: #2d3436;
+      text-decoration: none;
+    }
+
+    .footer-title {
+      color: #2d3436;
+      font-weight: 600;
+      font-size: 1.2rem;
+      margin-bottom: 1.5rem;
+      position: relative;
+      display: inline-block;
+    }
+
+    .footer-title::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -5px;
+      width: 100%;
+      height: 2px;
+      background: linear-gradient(90deg, #5271d7, transparent);
+    }
+
+    .contact-info {
+      list-style: none;
+      padding: 0;
+    }
+
+    .contact-info li {
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .contact-info i {
+      color: #3b80f6;
+      width: 20px;
+    }
+
+    .social-links {
+      display: flex;
+      gap: 15px;
+    }
+
+    .social-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      background: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #2d3436;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    }
+
+    .social-icon:hover {
+      transform: translateY(-3px);
+      color: #4ea0ee;
+      box-shadow: 0 5px 15px rgba(108, 92, 231, 0.2);
+    }
+
+    .quick-links {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+      padding: 0;
+      list-style: none;
+    }
+
+    .quick-links a {
+      color: #2d3436;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .quick-links a:hover {
+      color: #214aaa;
+      transform: translateX(5px);
+    }
+
+    .quick-links a::before {
+      content: '→';
+      opacity: 0;
+      transition: all 0.3s ease;
+    }
+
+    .quick-links a:hover::before {
+      opacity: 1;
+    }
+
+    .newsletter-input {
+      border: none;
+      padding: 0.8rem;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    }
+
+    .btn-subscribe {
+      background: linear-gradient(45deg, #45aafc, #45aafc);
+      border: none;
+      box-shadow: 0 2px 10px rgba(108, 92, 231, 0.2);
+      padding: 0.8rem 2rem;
+      border-radius: 10px;
+      transition: all 0.3s ease;
+    }
+
+    .btn-subscribe:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(108, 92, 231, 0.3);
+    }
+
+    .footer-bottom {
+      background: white;
+      border-top: 1px solid rgba(0, 0, 0, 0.05);
+    }
+
+    .footer-bottom p {
+      margin: 0;
+      color: #6c757d;
+    }
+
+    .footer-bottom a {
+      color: #45aafc;
+      text-decoration: none;
+    }
+
+    .footer-bottom a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+      .quick-links {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .branch-card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border-radius: 0.5rem;
+    }
+
+    .branch-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1) !important;
+    }
+
+    .branch-info {
+      background-color: #fff;
+    }
+
     .branch-map {
-      height: 250px;
+      background-color: #f8f9fa;
     }
-  }
-.navbar.sticky-top {
-  top: 0;
-  z-index: 1030; /* más alto que otros elementos */
-}
 
-  
+    .branch-badge {
+      display: inline-block;
+      padding: 0.35rem 0.75rem;
+      border-radius: 50rem;
+      font-size: 1rem;
+      font-weight: 600;
+    }
+
+    .schedule-box {
+      border-left: 3px solid #0d6efd;
+    }
+
+    .schedule-item {
+      border-bottom: 1px dashed #dee2e6;
+      padding-bottom: 0.5rem;
+    }
+
+    .schedule-item:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+
+    .divider {
+      width: 80px;
+      height: 3px;
+      opacity: 0.7;
+    }
+
+    .chat-button {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #005fa3;
+      color: white;
+      font-size: 24px;
+      padding: 14px;
+      border-radius: 50%;
+      cursor: pointer;
+      z-index: 1000;
+      border: none;
+      box-shadow: 0 4px 12px rgba(21, 22, 22, 0.486);
+    }
+
+    .chat-widget {
+      position: fixed;
+      bottom: 80px;
+      right: 20px;
+      width: 380px;
+      height: 485px;
+      background-color: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.548);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .chat-header {
+      background-color: #005fa3;
+      color: white;
+      padding: 12px 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 14px;
+    }
+
+    .chat-header .avatar {
+      width: 28px;
+      height: 28px;
+      margin-right: 8px;
+      border-radius: 50%;
+      background-color: white;
+    }
+
+    .chat-header span {
+      flex-grow: 1;
+      margin-left: 8px;
+    }
+
+    .close-button {
+      background: none;
+      border: none;
+      color: rgb(233, 233, 233);
+      font-size: 18px;
+      cursor: pointer;
+    }
+
+    .chat-iframe {
+      border: none;
+      width: 100%;
+      height: 100%;
+
+    }
+
+    @media (max-width: 767.98px) {
+      .branch-card .row {
+        flex-direction: column-reverse;
+      }
+
+      .branch-info,
+      .branch-map {
+        width: 100%;
+      }
+
+      .branch-map {
+        height: 250px;
+      }
+    }
+
+    .navbar.sticky-top {
+      top: 0;
+      z-index: 1030;
+      /* más alto que otros elementos */
+    }
   </style>
-  </head>
-  <nav class="navbar navbar-expand-lg bg-white shadow-sm sticky-top align-content-xl-center">
-    <div class="container-fluid px-4">
-      <a class="navbar-brand" href="#">
-        <img src="https://static.wixstatic.com/media/0bf950_155f8cd81f6d4fe5ac3419b8e0397b40~mv2.png/v1/crop/x_0,y_260,w_6000,h_2480/fill/w_508,h_210,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/LOGO%20SIN%20FONDO%20OFICIAL.png" alt="logo" height="60">
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+</head>
+<nav class="navbar navbar-expand-lg bg-white shadow-sm sticky-top align-content-xl-center">
+  <div class="container-fluid px-4">
+    <a class="navbar-brand" href="#">
+      <img
+        src="https://static.wixstatic.com/media/0bf950_155f8cd81f6d4fe5ac3419b8e0397b40~mv2.png/v1/crop/x_0,y_260,w_6000,h_2480/fill/w_508,h_210,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/LOGO%20SIN%20FONDO%20OFICIAL.png"
+        alt="logo" height="60">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-      <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
-        <ul class="navbar-nav" >
-          <li class="nav-item">
-            <a class="nav-link fw-semibold" href="./inicio.html">Inicio</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link fw-semibold" href="./credito-grupal.html">Crédito Grupal</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link fw-semibold" href="./credito-individual.html">Crédito Individual</a>
-          </li>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link fw-semibold" href="./inicio.html">Inicio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link fw-semibold" href="./credito-grupal.html">Crédito Grupal</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link fw-semibold" href="./credito-individual.html">Crédito Individual</a>
+        </li>
 
-          <!-- Mega Dropdown -->
-          <li class="nav-item dropdown position-static">
-            <a class="nav-link dropdown-toggle fw-semibold" href="#" id="megaMenu" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Sociales
-            </a>
-            <div class="dropdown-menu w-100 mt-0 border-0 shadow-lg p-4 rounded-3" aria-labelledby="megaMenu" style="min-width: 600px;">
-              <div class="row">
-                <div class="col-md-6">
-                  <h6 class="fw-bold text-dark mb-3">Redes Sociales</h6>
-                  <a class="dropdown-item mb-2" href="https://www.facebook.com/financiera.vam?locale=es_LA"><i class="fa-brands fa-facebook me-2 text-primary"></i> Facebook</a>
-                  <a class="dropdown-item mb-2" href="https://api.whatsapp.com/message/CD27WLZQZSXIJ1?autoload=1&app_absent=0"><i class="fa-brands fa-whatsapp me-2 text-success"></i> Whatsapp</a>
-                  <a class="dropdown-item mb-2" href="https://www.instagram.com/vamosamejora.r/?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw%3D%3D#"><i class="fa-brands fa-instagram me-2" style="color: #ff0088;"></i> Instagram</a>
-                </div>
-                <div class="col-md-6">
-                  <h6 class="fw-bold text-dark mb-3">Conocer más</h6>
-                  <a class="dropdown-item mb-2" href="nosotros.html"><i class="fas fa-users me-2 text-info"></i> Sobre Nosotros</a>
-                  <a class="dropdown-item mb-2" href="testimonios.html"><i class="fas fa-layer-group me-2 text-secondary"></i> Testimonios</a>
-                  <a class="dropdown-item mb-2" href="bolsatrabjo.html"><i class="fas fa-cubes me-2 text-danger"></i> Bolsa de Trabajo</a>
-                </div>
+        <!-- Mega Dropdown -->
+        <li class="nav-item dropdown position-static">
+          <a class="nav-link dropdown-toggle fw-semibold" href="#" id="megaMenu" role="button" data-bs-toggle="dropdown"
+            aria-expanded="false">
+            Sociales
+          </a>
+          <div class="dropdown-menu w-100 mt-0 border-0 shadow-lg p-4 rounded-3" aria-labelledby="megaMenu"
+            style="min-width: 600px;">
+            <div class="row">
+              <div class="col-md-6">
+                <h6 class="fw-bold text-dark mb-3">Redes Sociales</h6>
+                <a class="dropdown-item mb-2" href="https://www.facebook.com/financiera.vam?locale=es_LA"><i
+                    class="fa-brands fa-facebook me-2 text-primary"></i> Facebook</a>
+                <a class="dropdown-item mb-2"
+                  href="https://api.whatsapp.com/message/CD27WLZQZSXIJ1?autoload=1&app_absent=0"><i
+                    class="fa-brands fa-whatsapp me-2 text-success"></i> Whatsapp</a>
+                <a class="dropdown-item mb-2"
+                  href="https://www.instagram.com/vamosamejora.r/?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw%3D%3D#"><i
+                    class="fa-brands fa-instagram me-2" style="color: #ff0088;"></i> Instagram</a>
+              </div>
+              <div class="col-md-6">
+                <h6 class="fw-bold text-dark mb-3">Conocer más</h6>
+                <a class="dropdown-item mb-2" href="nosotros.html"><i class="fas fa-users me-2 text-info"></i> Sobre
+                  Nosotros</a>
+                <a class="dropdown-item mb-2" href="testimonios.html"><i
+                    class="fas fa-layer-group me-2 text-secondary"></i> Testimonios</a>
+                <a class="dropdown-item mb-2" href="bolsatrabjo.html"><i class="fas fa-cubes me-2 text-danger"></i>
+                  Bolsa de Trabajo</a>
               </div>
             </div>
-          </li>
-        </ul>
-      </div>
+          </div>
+        </li>
+      </ul>
     </div>
-  </nav>
+  </div>
+</nav>
 
-    <body>
-      <header>
-      <div class="video-container p-4">
-        <video src="../assets/file.mp4" alt="video-vam" autoplay muted playsinline loop></video>
-      </div>
-      </header>
-    <!---- Hero Video Section -->
-      <section class="hero-section bg-light text-dark py-2">
-        <div class="container py-5">
-          <div class="row align-items-center">
-            <div class="col-lg-6">
-              <h1 class="display-4 fw-bold mb-4">Transforma tus sueños en realidad</h1>
-                <p class="lead mb-4">Obtén el crédito que necesitas para iniciar tu negocio</p>
-            <div class="d-flex gap-3 mb-4">
-                <button class="btn btn-warning btn-lg px-4 fw-bold">Chatear con nuestro asesor virtual</button>
-                <button class="btn btn-outline-dark btn-lg px-4">Más información</button>
-            </div>
-            <div>
-              <h3 class="fw-bold">+15</h3>
-              <p>Años de experiencia</p>
-            </div>
+<body>
+  <header>
+    <div class="video-container p-4">
+      <video src="../assets/file.mp4" alt="video-vam" autoplay muted playsinline loop></video>
+    </div>
+  </header>
+  <!---- Hero Video Section -->
+  <section class="hero-section bg-light text-dark py-2">
+    <div class="container py-5">
+      <div class="row align-items-center">
+        <div class="col-lg-6">
+          <h1 class="display-4 fw-bold mb-4">Transforma tus sueños en realidad</h1>
+          <p class="lead mb-4">Obtén el crédito que necesitas para iniciar tu negocio</p>
+          <div class="d-flex gap-3 mb-4">
+            <button class="btn btn-warning btn-lg px-4 fw-bold">Chatear con nuestro asesor virtual</button>
+            <button class="btn btn-outline-dark btn-lg px-4">Más información</button>
+          </div>
+          <div>
+            <h3 class="fw-bold">+15</h3>
+            <p>Años de experiencia</p>
           </div>
         </div>
-<<<<<<< HEAD
-      </section>
-      <!---BENEFICIOS Y CREDITOS-->
-      <div class="container py-5">
-        <h4 class="section-title display-5 fw-bold">Conoce cómo podemos apoyar tu crecimiento</h4>
-        <div class="row text-center g-4">
-
-          <!-- Crédito comunal con animaciones -->
-          <div class="col-md-4">
-            <div class="card border-success shadow h-100 service-card">
-              <div class="card-body p-4">
-                <i class="fa-solid fa-people-group fa-3x mb-3 card-icon" style="color: #34bc0a;"></i>
-                <h4 class="card-title fw-bold">Crédito Comunal Solidario</h4>
-                <p class="card-text">
-                  Apoyo a grupos solidarios con microempresas o negocios por iniciar. Financia su crecimiento y mejora su calidad de vida.
-                </p>
-                <button href="credito-grupal.html" class="btn btn-outline-success mt-3 btn-hover-grow" >Más información</button>
-              </div>
-            </div>
-          </div>
-
-          <!-- Crédito individual con animaciones -->
-          <div class="col-md-4">
-            <div class="card border-primary shadow h-100 service-card">
-              <div class="card-body p-4">
-                <i class="fa-solid fa-person fa-3x mb-3 card-icon" style="color: #167fb8;"></i>
-                <h4 class="card-title fw-bold">Crédito Individual</h4>
-                <p class="card-text">
-                  Para clientes nuevos o recurrentes que requieren montos mayores para invertir o fortalecer su microempresa.
-                </p>
-                <button href="credito-individual.html" class="btn btn-outline-primary mt-3 btn-hover-grow">Más información</button>
-              </div>
-            </div>
-          </div>
-
-          <!-- Beneficios con animaciones especiales -->
-          <div class="col-md-4">
-            <div class="card border-warning shadow h-100 service-card benefits-card">
-              <div class="card-body p-4">
-              <i class="fa-solid fa-trophy fa-3x mb-3" style="color: #FFD43B;"></i>
-                <h4 class="card-title fw-bold">Beneficios</h4>
-                <ul class="list-unstyled text-start mt-3">
-                  <li>✦ Baja tasa de interés</li>
-                  <li>✦ Regalos en temporada de regreso a clases y navideños</li>
-                  <li>✦ Bono por recomendación</li>
-                  <li>✦ Atención personalizada</li>
-                  <li>✦ Microseguro de vida</li>
-                  <li>✦ Sin comisión por apertura</li>
-                </ul>
-                <div class="text-center">
-                  <button class="btn btn-outline-warning mt-3 btn-hover-grow">Más información</button>
-                </div>
-              </div>
-            </div>
-          </div>
-
-=======
         <div class="col-lg-6">
           <img src="https://credy-api.credy.com/uploads/images/79b76d0a-06f7-473f-b99b-e860596a7e26/cardloan.png"
             alt="Personas felices recibiendo dinero" class="img-fluid rounded shadow">
->>>>>>> 9720d0308bf4dfe15af7f61beccb1d4dc5ef9a2f
         </div>
       </div>
-    </div>
   </section>
   <!---BENEFICIOS Y CREDITOS-->
   <div class="container py-5">
@@ -596,7 +616,8 @@
               Apoyo a grupos solidarios con microempresas o negocios por iniciar. Financia su crecimiento y mejora su
               calidad de vida.
             </p>
-            <button class="btn btn-outline-success mt-3 btn-hover-grow">Más información</button>
+            <button href="credito-grupal.html" class="btn btn-outline-success mt-3 btn-hover-grow">Más
+              información</button>
           </div>
         </div>
       </div>
@@ -611,7 +632,8 @@
               Para clientes nuevos o recurrentes que requieren montos mayores para invertir o fortalecer su
               microempresa.
             </p>
-            <button class="btn btn-outline-primary mt-3 btn-hover-grow">Más información</button>
+            <button href="credito-individual.html" class="btn btn-outline-primary mt-3 btn-hover-grow">Más
+              información</button>
           </div>
         </div>
       </div>
@@ -636,9 +658,9 @@
           </div>
         </div>
       </div>
-
     </div>
   </div>
+  </section>
 
   <!-- Otros Servicios -->
   <section class="otros-servicios py-5 bg-light">
@@ -646,375 +668,54 @@
       <h2 class="text-center fw-bold mb-4">Otros Servicios</h2>
       <div class="row g-4 justify-content-center">
 
-<<<<<<< HEAD
-      <!-- Servicio 1 -->
-      <div class="col-md-4">
-        <div class="service-card text-center p-4 shadow-sm rounded bg-white h-100">
-          <i class="fas fa-file-invoice-dollar fa-2x mb-3 text-warning"></i>
-          <h5 class="fw-semibold">Pago de servicios</h5>
-          <p class="text-muted">Realiza pagos de luz, agua, teléfono y más en nuestras sucursales.</p>
-
-          <div class="d-flex justify-content-center flex-wrap gap-3 mt-3">
-            <img src="https://cdn.worldvectorlogo.com/logos/telmex-1.svg" alt="icon-telmex" height="50" width="60">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/8/8c/Logo_neutral_de_la_Comisi%C3%B3n_Federal_de_Electricidad.svg" alt="icon-cfe" height="50" width="50">
-            <img src="https://roams.mx/images/logos/Color_280px/megacable.webp" alt="icon-megacable" height="50" width="80">
-            <img src="https://gowi.mx/wp-content/uploads/2022/06/Aliado-Logo-izzi@2x.png" alt="icon-izzi" height="70" width="75">
-            <img src="https://images.seeklogo.com/logo-png/2/3/cablemas-logo-png_seeklogo-24388.png" alt="icon-cablemas" height="70" width="75">
-            <img src="https://cdn.freebiesupply.com/logos/large/2x/axtel-logo-png-transparent.png" alt="icon-axtel" height="70" width="75">
-            <img src="https://images.seeklogo.com/logo-png/7/2/infonavit-logo-png_seeklogo-71581.png" alt="icon-infonavit" height="70" width="75">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/0/09/Dish_Mexico.PNG" alt="icon-dish" height="55" width="75">
-            <img src="https://upload.wikimedia.org/wikipedia/en/thumb/a/a6/Sky_Group_logo_2020.svg/1200px-Sky_Group_logo_2020.svg.png" alt="icon-sky" height="60" width="75">
-          </div>
-        </div>
-      </div>
-
-
-      <!-- Servicio 2 -->
-      <div class="col-md-4">
-      <div class="service-card text-center p-4 shadow-sm rounded bg-white h-100">
-      <i class="fas fa-hand-holding-usd fa-2x mb-3 text-warning"></i>
-      <h5 class="fw-semibold">Remesas</h5>
-      <p class="text-muted">Recibe y envía dinero a nivel nacional e internacional.</p>
-          <div class="d-flex justify-content-center flex-wrap gap-3 mt-3">
-            <img src="https://1000marcas.net/wp-content/uploads/2020/07/logo-MoneyGram.png" alt="icon-moneygram" height="50" width="80">
-            <img src="https://1000marcas.net/wp-content/uploads/2020/07/Western-Union-Logo-2013.jpg" alt="icon-westernunion" height="50" width="50">
-            <img src="https://airpak.com/cashpak/wp-content/uploads/2021/03/envialana-300x154.png" alt="icon-envialana" height="50" width="80">
-            <img src="https://ccolon.org.mx/wp-content/uploads/2023/06/ORLANDI-VALUTA.webp" alt="icon-orlandi-valuta" height="60" width="60">
-          </div>
-      </div>
-      </div>
-
-      <!-- Servicio 3 -->
-      <div class="col-md-4">
-      <div class="service-card text-center p-4 shadow-sm rounded bg-white h-100">
-      <i class="fas fa-mobile-alt fa-2x mb-3 text-warning"></i>
-      <h5 class="fw-semibold">Recarga de tiempo aire</h5>
-      <p class="text-muted">Realiza recargas para todas las compañías en nuestras sucursales.</p>
-          <div class="d-flex justify-content-center flex-wrap gap-3 mt-3">
-            <img src="https://tsociety.info/wp-content/uploads/2024/01/telcel-logo-300x150.webp" alt="icon-telcel" height="50" width="60">
-            <img src="https://images.seeklogo.com/logo-png/19/2/unefon-logo-png_seeklogo-196154.png" alt="icon-unefon" height="50" width="50">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/3/31/AT%26T_logo_2016.svg" alt="icon-at&t" height="50" width="80">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Logo_Movistar.svg/1024px-Logo_Movistar.svg.png" alt="icon-movistar" height="70" width="135">
-          </div>
-      </div>
-      </div>
-
-      </div>
-      </div>
-      </section>
-      <!-- Preguntas Frecuentes -->
-      <section class="faq py-5 bg-light">
-        <div class="container">
-          <h2 class="section-title display-5 fw-bold">Preguntas Frecuentes</h2>
-          <div class="accordion" id="accordionExample">
-            <div class="accordion-item">
-             <h2 class="accordion-header">
-                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
-                ¿Qué necesito para solicitar un crédito?
-                </button>
-              </h2>
-              <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
-             <div class="accordion-body">
-                Necesitas contar con identificación oficial, comprobante de domicilio y demostrar tu capacidad de pago.
-            </div>
-              </div>
-            </div>
-          <div class="accordion-item">
-            <h2 class="accordion-header">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
-                ¿Cuánto tiempo tarda la aprobación?
-              </button>
-            </h2>
-            <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-              <div class="accordion-body">
-                Generalmente el proceso tarda entre 24 a 48 horas, dependiendo de la documentación y verificación.
-              </div>
-            </div>
-          </div>
-          <div class="accordion-item">
-              <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">
-                ¿Puedo liquidar mi crédito antes del plazo?
-                </button>
-              </h2>
-            <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-              <div class="accordion-body">
-                Sí, puedes realizar pagos anticipados sin penalización y así reducir intereses.
-              </div>
-            </div>
-          </div>
-=======
         <!-- Servicio 1 -->
         <div class="col-md-4">
           <div class="service-card text-center p-4 shadow-sm rounded bg-white h-100">
             <i class="fas fa-file-invoice-dollar fa-2x mb-3 text-warning"></i>
             <h5 class="fw-semibold">Pago de servicios</h5>
             <p class="text-muted">Realiza pagos de luz, agua, teléfono y más en nuestras sucursales.</p>
->>>>>>> 9720d0308bf4dfe15af7f61beccb1d4dc5ef9a2f
-          </div>
-        </div>
 
-<<<<<<< HEAD
-      <section class="aten py-5 bg-light">
-        <div class="container">
-          <div class="text-center mb-5">
-            <h2 class="section-title display-5 fw-bold mb-3">Nuestras Sucursales</h2>
-            <p class="lead text-muted">Conoce nuestros horarios y ubicaciones</p>
-            <div class="divider mx-auto bg-primary"></div>
-          </div>
-
-          <!-- Sucursal 1 -->
-          <div class="branch-card card mb-5 border-0 shadow-sm overflow-hidden">
-            <div class="row g-0">
-              <div class="col-md-4 branch-info">
-                <div class="card-body p-4">
-                  <div class="branch-badge bg-success text-white mb-3">Dolores Hidalgo</div>
-                  <p class="mb-3"><i class="fas fa-map-marker-alt text-primary me-2"></i> Rivera del Río, 65 B3</p>
-                  
-                  <div class="schedule-box bg-light p-3 rounded">
-                    <h6 class="d-flex align-items-center text-muted mb-3">
-                      <i class="far fa-clock me-2"></i> Horario
-                    </h6>
-                    <div class="schedule-item mb-2">
-                      <p class="mb-0 fw-medium">Lunes a Viernes</p>
-                      <p class="text-primary">9:00 a.m - 6:00 p.m</p>
-                    </div>
-                    <div class="schedule-item">
-                      <p class="mb-0 fw-medium">Sábado</p>
-                      <p class="text-primary">9:00 a.m - 2:00 p.m</p>
-                    </div>
-                  </div>
-                  
-                  <div class="mt-3">
-                    <a href="tel:+523333333333" class="btn btn-sm btn-outline-primary">
-                      <i class="fas fa-phone me-1"></i> Llamar
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-8 branch-map">
-                <div class="ratio ratio-16x9 h-100">
-                  <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d714.2499058203407!2d-100.93225267015563!3d21.153446414960413!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x842b3f08ee7528d5%3A0x6dcb8197590d59fa!2sPlaza%20Patria!5e0!3m2!1ses-419!2smx!4v1753120795489!5m2!1ses-419!2smx"
-                    style="border:0;"
-                    allowfullscreen=""
-                    loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade"
-                  ></iframe>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Sucursal 2 -->
-          <div class="branch-card card mb-5 border-0 shadow-sm overflow-hidden">
-            <div class="row g-0">
-              <div class="col-md-4 branch-info">
-                <div class="card-body p-4">
-                  <div class="branch-badge bg-success text-white mb-3">San Miguel de Allende</div>
-                  <p class="mb-3"><i class="fas fa-map-marker-alt text-primary me-2"></i> Blvrd de la Conspiración, Arcos de San Miguel</p>
-                  
-                  <div class="schedule-box bg-light p-3 rounded">
-                    <h6 class="d-flex align-items-center text-muted mb-3">
-                      <i class="far fa-clock me-2"></i> Horario
-                    </h6>
-                    <div class="schedule-item mb-2">
-                      <p class="mb-0 fw-medium">Lunes a Viernes</p>
-                      <p class="text-primary">9:00 a.m - 6:00 p.m</p>
-                    </div>
-                    <div class="schedule-item">
-                      <p class="mb-0 fw-medium">Sábado</p>
-                      <p class="text-primary">9:00 a.m - 2:00 p.m</p>
-                    </div>
-                  </div>
-                  
-                  <div class="mt-3">
-                    <a href="tel:+523333333333" class="btn btn-sm btn-outline-primary">
-                      <i class="fas fa-phone me-1"></i> Llamar
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-8 branch-map">
-                <div class="ratio ratio-16x9 h-100">
-                  <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3727.1218058114123!2d-100.72954359116545!3d20.90741858063123!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x842b51c779907e2d%3A0x7cf27c735f222135!2sPlaza%20Real%20del%20Conde%20San%20Miguel%20Allende!5e0!3m2!1ses-419!2smx!4v1753121265892!5m2!1ses-419!2smx"
-                    style="border:0;"
-                    allowfullscreen=""
-                    loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade"
-                  ></iframe>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Sucursal 3 -->
-          <div class="branch-card card mb-5 border-0 shadow-sm overflow-hidden">
-            <div class="row g-0">
-              <div class="col-md-4 branch-info">
-                <div class="card-body p-4">
-                  <div class="branch-badge bg-success text-white mb-3">San Diego de la Unión</div>
-                  <p class="mb-3"><i class="fas fa-map-marker-alt text-primary me-2"></i> Aldama 64, Barrio del Refugio</p>
-                  
-                  <div class="schedule-box bg-light p-3 rounded">
-                    <h6 class="d-flex align-items-center text-muted mb-3">
-                      <i class="far fa-clock me-2"></i> Horario
-                    </h6>
-                    <div class="schedule-item mb-2">
-                      <p class="mb-0 fw-medium">Lunes a Viernes</p>
-                      <p class="text-primary">9:00 a.m - 6:00 p.m</p>
-                    </div>
-                    <div class="schedule-item">
-                      <p class="mb-0 fw-medium">Sábado</p>
-                      <p class="text-primary">9:00 a.m - 2:00 p.m</p>
-                    </div>
-                  </div>
-                  
-                  <div class="mt-3">
-                    <a href="tel:+523333333333" class="btn btn-sm btn-outline-primary">
-                      <i class="fas fa-phone me-1"></i> Llamar
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-8 branch-map">
-                <div class="ratio ratio-16x9 h-100">
-                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1856.5532458757532!2d-100.8709510568376!3d21.4643377875126!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x842b27232708beb7%3A0x70da6d65b1c72ba5!2sAldama%2064%2C%20Barrio%20del%20Refugio%2C%2037853%20San%20Diego%20de%20la%20Uni%C3%B3n%2C%20Gto.!5e0!3m2!1ses-419!2smx!4v1753124413058!5m2!1ses-419!2smx" 
-                  style="border:0;" 
-                  allowfullscreen="" loading="lazy" 
-                  referrerpolicy="no-referrer-when-downgrade"></iframe>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Sucursal 4 -->
-          <div class="branch-card card mb-5 border-0 shadow-sm overflow-hidden">
-            <div class="row g-0">
-              <div class="col-md-4 branch-info">
-                <div class="card-body p-4">
-                  <div class="branch-badge bg-success text-white mb-3">San Luis de la Paz</div>
-                  <p class="mb-3"><i class="fas fa-map-marker-alt text-primary me-2"></i> C. Galeana 634, Ecce Homo</p>
-                  
-                  <div class="schedule-box bg-light p-3 rounded">
-                    <h6 class="d-flex align-items-center text-muted mb-3">
-                      <i class="far fa-clock me-2"></i> Horario
-                    </h6>
-                    <div class="schedule-item mb-2">
-                      <p class="mb-0 fw-medium">Lunes a Viernes</p>
-                      <p class="text-primary">9:00 a.m - 6:00 p.m</p>
-                    </div>
-                    <div class="schedule-item">
-                      <p class="mb-0 fw-medium">Sábado</p>
-                      <p class="text-primary">9:00 a.m - 2:00 p.m</p>
-                    </div>
-                  </div>
-                  
-                  <div class="mt-3">
-                    <a href="tel:+523333333333" class="btn btn-sm btn-outline-primary">
-                      <i class="fas fa-phone me-1"></i> Llamar
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-8 branch-map">
-                <div class="ratio ratio-16x9 h-100">
-                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d242.2793520234277!2d-100.51746554917992!3d21.296743840590104!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d4cfcc04c46bff%3A0x92783be419f5d678!2sPatio%20Bistro.Deli!5e0!3m2!1ses-419!2smx!4v1753127168525!5m2!1ses-419!2smx" 
-                  style="border:0;" 
-                  allowfullscreen="" loading="lazy" 
-                  referrerpolicy="no-referrer-when-downgrade"></iframe>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Sucursal 5 -->
-          <div class="branch-card card mb-5 border-0 shadow-sm overflow-hidden">
-            <div class="row g-0">
-              <div class="col-md-4 branch-info">
-                <div class="card-body p-4">
-                  <div class="branch-badge bg-success text-white mb-3">San Felipe</div>
-                  <p class="mb-3"><i class="fas fa-map-marker-alt text-primary me-2"></i> C. Obregón #112 Int 7, Centro comercial Vianney</p>
-                  
-                  <div class="schedule-box bg-light p-3 rounded">
-                    <h6 class="d-flex align-items-center text-muted mb-3">
-                      <i class="far fa-clock me-2"></i> Horario
-                    </h6>
-                    <div class="schedule-item mb-2">
-                      <p class="mb-0 fw-medium">Lunes a Viernes</p>
-                      <p class="text-primary">9:00 a.m - 6:00 p.m</p>
-                    </div>
-                    <div class="schedule-item">
-                      <p class="mb-0 fw-medium">Sábado</p>
-                      <p class="text-primary">9:00 a.m - 2:00 p.m</p>
-                    </div>
-                  </div>
-                  
-                  <div class="mt-3">
-                    <a href="tel:+523333333333" class="btn btn-sm btn-outline-primary">
-                      <i class="fas fa-phone me-1"></i> Llamar
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-8 branch-map">
-                <div class="ratio ratio-16x9 h-100">
-                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d464.08783692523366!2d-101.21515321471692!3d21.480179082060534!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x842afd0061248f6b%3A0x9b260c6b0bb80ffa!2sCENTRO%20COMERCIAL%20VIANNEY!5e0!3m2!1ses-419!2smx!4v1753125446712!5m2!1ses-419!2smx"
-                  style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Sucursal 6 -->
-          <div class="branch-card card border-0 shadow-sm overflow-hidden">
-            <div class="row g-0">
-              <div class="col-md-4 branch-info">
-                <div class="card-body p-4">
-                  <div class="branch-badge bg-success text-white mb-3">Victoria</div>
-                  <p class="mb-3"><i class="fas fa-map-marker-alt text-primary me-2"></i> Morelos 24, Centro</p>
-                  
-                  <div class="schedule-box bg-light p-3 rounded">
-                    <h6 class="d-flex align-items-center text-muted mb-3">
-                      <i class="far fa-clock me-2"></i> Horario
-                    </h6>
-                    <div class="schedule-item mb-2">
-                      <p class="mb-0 fw-medium">Lunes a Viernes</p>
-                      <p class="text-primary">9:00 a.m - 6:00 p.m</p>
-                    </div>
-                    <div class="schedule-item">
-                      <p class="mb-0 fw-medium">Sábado</p>
-                      <p class="text-primary">9:00 a.m - 2:00 p.m</p>
-                    </div>
-                  </div>
-                  
-                  <div class="mt-3">
-                    <a href="tel:+523333333333" class="btn btn-sm btn-outline-primary">
-                      <i class="fas fa-phone me-1"></i> Llamar
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-8 branch-map">
-                <div class="ratio ratio-16x9 h-100">
-                  <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3719.519995586905!2d-100.217175!3d21.211219!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjHCsDEyJzQwLjQiTiAxMDDCsDEzJzAxLjgiVw!5e0!3m2!1ses-419!2smx!4v1753126832732!5m2!1ses-419!2smx" 
-                  style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                </div>
-              </div>
+            <div class="d-flex justify-content-center flex-wrap gap-3 mt-3">
+              <img src="https://cdn.worldvectorlogo.com/logos/telmex-1.svg" alt="icon-telmex" height="50" width="60">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/8/8c/Logo_neutral_de_la_Comisi%C3%B3n_Federal_de_Electricidad.svg"
+                alt="icon-cfe" height="50" width="50">
+              <img src="https://roams.mx/images/logos/Color_280px/megacable.webp" alt="icon-megacable" height="50"
+                width="80">
+              <img src="https://gowi.mx/wp-content/uploads/2022/06/Aliado-Logo-izzi@2x.png" alt="icon-izzi" height="70"
+                width="75">
+              <img src="https://images.seeklogo.com/logo-png/2/3/cablemas-logo-png_seeklogo-24388.png"
+                alt="icon-cablemas" height="70" width="75">
+              <img src="https://cdn.freebiesupply.com/logos/large/2x/axtel-logo-png-transparent.png" alt="icon-axtel"
+                height="70" width="75">
+              <img src="https://images.seeklogo.com/logo-png/7/2/infonavit-logo-png_seeklogo-71581.png"
+                alt="icon-infonavit" height="70" width="75">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/0/09/Dish_Mexico.PNG" alt="icon-dish" height="55"
+                width="75">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/en/thumb/a/a6/Sky_Group_logo_2020.svg/1200px-Sky_Group_logo_2020.svg.png"
+                alt="icon-sky" height="60" width="75">
             </div>
           </div>
         </div>
-      </section>
-      <!-- Bootstrap JS Bundle -->
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
-=======
+
+
         <!-- Servicio 2 -->
         <div class="col-md-4">
           <div class="service-card text-center p-4 shadow-sm rounded bg-white h-100">
             <i class="fas fa-hand-holding-usd fa-2x mb-3 text-warning"></i>
             <h5 class="fw-semibold">Remesas</h5>
             <p class="text-muted">Recibe y envía dinero a nivel nacional e internacional.</p>
+            <div class="d-flex justify-content-center flex-wrap gap-3 mt-3">
+              <img src="https://1000marcas.net/wp-content/uploads/2020/07/logo-MoneyGram.png" alt="icon-moneygram"
+                height="50" width="80">
+              <img src="https://1000marcas.net/wp-content/uploads/2020/07/Western-Union-Logo-2013.jpg"
+                alt="icon-westernunion" height="50" width="50">
+              <img src="https://airpak.com/cashpak/wp-content/uploads/2021/03/envialana-300x154.png"
+                alt="icon-envialana" height="50" width="80">
+              <img src="https://ccolon.org.mx/wp-content/uploads/2023/06/ORLANDI-VALUTA.webp" alt="icon-orlandi-valuta"
+                height="60" width="60">
+            </div>
           </div>
         </div>
 
@@ -1024,6 +725,17 @@
             <i class="fas fa-mobile-alt fa-2x mb-3 text-warning"></i>
             <h5 class="fw-semibold">Recarga de tiempo aire</h5>
             <p class="text-muted">Realiza recargas para todas las compañías en nuestras sucursales.</p>
+            <div class="d-flex justify-content-center flex-wrap gap-3 mt-3">
+              <img src="https://tsociety.info/wp-content/uploads/2024/01/telcel-logo-300x150.webp" alt="icon-telcel"
+                height="50" width="60">
+              <img src="https://images.seeklogo.com/logo-png/19/2/unefon-logo-png_seeklogo-196154.png" alt="icon-unefon"
+                height="50" width="50">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/3/31/AT%26T_logo_2016.svg" alt="icon-at&t"
+                height="50" width="80">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Logo_Movistar.svg/1024px-Logo_Movistar.svg.png"
+                alt="icon-movistar" height="70" width="135">
+            </div>
           </div>
         </div>
 
@@ -1075,531 +787,394 @@
         </div>
       </div>
     </div>
-  </section>
 
-  <section class="aten py-5 bg-light">
-    <div class="container">
-      <h2 class="section-title display-5 fw-bold text-center mb-5">
-        Conoce nuestro horario de atención
-      </h2>
-      <div class="row text-center g-4">
-        <div class="col-md-4 border-end">
-          <h5 class="fw-bold text-success mb-2">Dolores Hidalgo</h5>
-          <p class="mb-1">Rivera del Río, 65 B3</p>
-          <p class="text-muted fw-semibold mb-1">Horario</p>
-          <p class="mb-0">Lunes a Viernes</p>
-          <p class="text-primary mb-2">9:00 a.m - 6:00 p.m</p>
-          <p class="mb-0">Sábado</p>
-          <p class="text-primary">9:00 a.m - 2:00 p.m</p>
-        </div>
-        <div class="col-md-4 border-end">
-          <h5 class="fw-bold text-success mb-2">San Luis de la Paz</h5>
-          <p class="mb-1">Centro</p>
-          <p class="text-muted fw-semibold mb-1">Horario</p>
-          <p class="mb-0">Lunes a Viernes</p>
-          <p class="text-primary mb-2">9:00 a.m - 6:00 p.m</p>
-          <p class="mb-0">Sábado</p>
-          <p class="text-primary">9:00 a.m - 2:00 p.m</p>
-        </div>
-        <div class="col-md-4">
-          <h5 class="fw-bold text-success mb-2">Miguel de Allende</h5>
-          <p class="mb-1">Plaza Mayor</p>
-          <p class="text-muted fw-semibold mb-1">Horario</p>
-          <p class="mb-0">Lunes a Viernes</p>
-          <p class="text-primary mb-2">9:00 a.m - 6:00 p.m</p>
-          <p class="mb-0">Sábado</p>
-          <p class="text-primary">9:00 a.m - 2:00 p.m</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Bootstrap JS Bundle -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
->>>>>>> 9720d0308bf4dfe15af7f61beccb1d4dc5ef9a2f
-
-
-  <!-- Script para animaciones al hacer scroll -->
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      // Animación de aparición al hacer scroll
-      const cards = document.querySelectorAll('.service-card');
-
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.style.opacity = '1';
-          }
-        });
-      }, { threshold: 0.1 });
-
-      cards.forEach(card => {
-        observer.observe(card);
-      });
-
-      // Efecto especial para el botón de beneficios
-      const benefitsBtn = document.querySelector('.benefits-card .btn');
-      benefitsBtn.addEventListener('mouseenter', function () {
-        this.innerHTML = '<i class="fas fa-gift me-2"></i> Ver todos los beneficios';
-      });
-
-      benefitsBtn.addEventListener('mouseleave', function () {
-        this.innerHTML = 'Más información';
-      });
-    });
-  </script>
-
-  <footer class="modern-footer pt-5">
-    <div class="container footer-content">
-      <div class="row g-4 mb-5">
-        <!-- Company Info -->
-        <div class="col-lg-4 col-md-6">
-          <a href="#" class="footer-logo d-block mb-4">
-            <img
-              src="https://static.wixstatic.com/media/0bf950_155f8cd81f6d4fe5ac3419b8e0397b40~mv2.png/v1/crop/x_0,y_260,w_6000,h_2480/fill/w_508,h_210,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/LOGO%20SIN%20FONDO%20OFICIAL.png"
-              alt="logo" width="120" height="50">
-          </a>
-          <p class="text-muted mb-4">
-            VAMOS A MEJORAR
-            es una empresa mexicana dedicada al otorgamiento de servicios financieros para micro empresas con la
-            convicción de crecimiento Laboral y Personal
-          </p>
-          <ul class="contact-info mb-4">
-            <li>
-              <i class="fas fa-map-marker-alt"></i>
-              <span>Rivera del Río #65 Int B - 3 Plaza Patria Zona Centro, C.P. 37800, Dolores Hidalgo,
-                Guanajuato</span>
-            </li>
-            <li>
-              <i class="fas fa-phone"></i>
-              <span>(+52) 4181544583</span>
-            </li>
-            <li>
-              <i class="fas fa-envelope"></i>
-              <span>vamosamejorar@vamosamejorar.com</span>
-            </li>
-          </ul>
-        </div>
-
-        <!-- Quick Links -->
-        <div class="col-lg-4 col-md-6">
-          <h3 class="footer-title">Links rápidos</h3>
-          <ul class="quick-links">
-            <li><a href="#">Aviso de privacidad</a></li>
-            <li><a href="#">Unidad Especializada</a></li>
-            <li><a href="#">Costos y Comisiones de nuestros productos</a></li>
-            <li><a href="#">Condusef</a></li>
-            <li><a href="#">Buro de entidades financieras</a></li>
-            <li><a href="#">Términos y condiciones</a></li>
-          </ul>
-        </div>
-
-        <!-- Newsletter -->
-        <div class="col-lg-4 col-md-12">
-          <h3 class="footer-title">Mantente conectado</h3>
-          <div class="social-links">
-            <a href="https://www.facebook.com/financiera.vam" class="social-icon"><i class="fab fa-facebook-f"></i></a>
-            <a href="https://www.instagram.com/vamosamejora.r?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
-              class="social-icon"><i class="fab fa-instagram"></i></a>
-            <a href="https://wa.me/5214181544583?text=Quiero%20m%C3%A1s%20informaci%C3%B3n%20para%20solicitar%20mi%20cr%C3%A9dito"
-              class="social-icon"><i class="fab fa-whatsapp"></i></a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Footer Bottom -->
-    <div class="footer-bottom">
+    <section class="aten py-5 bg-light">
       <div class="container">
-        <div class="row py-4">
-          <div class="col-md-6 text-center text-md-start">
-            <p>&copy; 2025 VAMOS A MEJORAR S.A. DE C.V. SOFOM. E.N.R. Todos los derechos reservados.</p>
+        <div class="text-center mb-5">
+          <h2 class="section-title display-5 fw-bold mb-3">Nuestras Sucursales</h2>
+          <p class="lead text-muted">Conoce nuestros horarios y ubicaciones</p>
+          <div class="divider mx-auto bg-primary"></div>
+        </div>
+
+        <!-- Sucursal 1 -->
+        <div class="branch-card card mb-5 border-0 shadow-sm overflow-hidden">
+          <div class="row g-0">
+            <div class="col-md-4 branch-info">
+              <div class="card-body p-4">
+                <div class="branch-badge bg-success text-white mb-3">Dolores Hidalgo</div>
+                <p class="mb-3"><i class="fas fa-map-marker-alt text-primary me-2"></i> Rivera del Río, 65 B3</p>
+
+                <div class="schedule-box bg-light p-3 rounded">
+                  <h6 class="d-flex align-items-center text-muted mb-3">
+                    <i class="far fa-clock me-2"></i> Horario
+                  </h6>
+                  <div class="schedule-item mb-2">
+                    <p class="mb-0 fw-medium">Lunes a Viernes</p>
+                    <p class="text-primary">9:00 a.m - 6:00 p.m</p>
+                  </div>
+                  <div class="schedule-item">
+                    <p class="mb-0 fw-medium">Sábado</p>
+                    <p class="text-primary">9:00 a.m - 2:00 p.m</p>
+                  </div>
+                </div>
+
+                <div class="mt-3">
+                  <a href="tel:+523333333333" class="btn btn-sm btn-outline-primary">
+                    <i class="fas fa-phone me-1"></i> Llamar
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-8 branch-map">
+              <div class="ratio ratio-16x9 h-100">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d714.2499058203407!2d-100.93225267015563!3d21.153446414960413!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x842b3f08ee7528d5%3A0x6dcb8197590d59fa!2sPlaza%20Patria!5e0!3m2!1ses-419!2smx!4v1753120795489!5m2!1ses-419!2smx"
+                  style="border:0;" allowfullscreen="" loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sucursal 2 -->
+        <div class="branch-card card mb-5 border-0 shadow-sm overflow-hidden">
+          <div class="row g-0">
+            <div class="col-md-4 branch-info">
+              <div class="card-body p-4">
+                <div class="branch-badge bg-success text-white mb-3">San Miguel de Allende</div>
+                <p class="mb-3"><i class="fas fa-map-marker-alt text-primary me-2"></i> Blvrd de la Conspiración, Arcos
+                  de San Miguel</p>
+
+                <div class="schedule-box bg-light p-3 rounded">
+                  <h6 class="d-flex align-items-center text-muted mb-3">
+                    <i class="far fa-clock me-2"></i> Horario
+                  </h6>
+                  <div class="schedule-item mb-2">
+                    <p class="mb-0 fw-medium">Lunes a Viernes</p>
+                    <p class="text-primary">9:00 a.m - 6:00 p.m</p>
+                  </div>
+                  <div class="schedule-item">
+                    <p class="mb-0 fw-medium">Sábado</p>
+                    <p class="text-primary">9:00 a.m - 2:00 p.m</p>
+                  </div>
+                </div>
+
+                <div class="mt-3">
+                  <a href="tel:+523333333333" class="btn btn-sm btn-outline-primary">
+                    <i class="fas fa-phone me-1"></i> Llamar
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-8 branch-map">
+              <div class="ratio ratio-16x9 h-100">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3727.1218058114123!2d-100.72954359116545!3d20.90741858063123!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x842b51c779907e2d%3A0x7cf27c735f222135!2sPlaza%20Real%20del%20Conde%20San%20Miguel%20Allende!5e0!3m2!1ses-419!2smx!4v1753121265892!5m2!1ses-419!2smx"
+                  style="border:0;" allowfullscreen="" loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sucursal 3 -->
+        <div class="branch-card card mb-5 border-0 shadow-sm overflow-hidden">
+          <div class="row g-0">
+            <div class="col-md-4 branch-info">
+              <div class="card-body p-4">
+                <div class="branch-badge bg-success text-white mb-3">San Diego de la Unión</div>
+                <p class="mb-3"><i class="fas fa-map-marker-alt text-primary me-2"></i> Aldama 64, Barrio del Refugio
+                </p>
+
+                <div class="schedule-box bg-light p-3 rounded">
+                  <h6 class="d-flex align-items-center text-muted mb-3">
+                    <i class="far fa-clock me-2"></i> Horario
+                  </h6>
+                  <div class="schedule-item mb-2">
+                    <p class="mb-0 fw-medium">Lunes a Viernes</p>
+                    <p class="text-primary">9:00 a.m - 6:00 p.m</p>
+                  </div>
+                  <div class="schedule-item">
+                    <p class="mb-0 fw-medium">Sábado</p>
+                    <p class="text-primary">9:00 a.m - 2:00 p.m</p>
+                  </div>
+                </div>
+
+                <div class="mt-3">
+                  <a href="tel:+523333333333" class="btn btn-sm btn-outline-primary">
+                    <i class="fas fa-phone me-1"></i> Llamar
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-8 branch-map">
+              <div class="ratio ratio-16x9 h-100">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1856.5532458757532!2d-100.8709510568376!3d21.4643377875126!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x842b27232708beb7%3A0x70da6d65b1c72ba5!2sAldama%2064%2C%20Barrio%20del%20Refugio%2C%2037853%20San%20Diego%20de%20la%20Uni%C3%B3n%2C%20Gto.!5e0!3m2!1ses-419!2smx!4v1753124413058!5m2!1ses-419!2smx"
+                  style="border:0;" allowfullscreen="" loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sucursal 4 -->
+        <div class="branch-card card mb-5 border-0 shadow-sm overflow-hidden">
+          <div class="row g-0">
+            <div class="col-md-4 branch-info">
+              <div class="card-body p-4">
+                <div class="branch-badge bg-success text-white mb-3">San Luis de la Paz</div>
+                <p class="mb-3"><i class="fas fa-map-marker-alt text-primary me-2"></i> C. Galeana 634, Ecce Homo</p>
+
+                <div class="schedule-box bg-light p-3 rounded">
+                  <h6 class="d-flex align-items-center text-muted mb-3">
+                    <i class="far fa-clock me-2"></i> Horario
+                  </h6>
+                  <div class="schedule-item mb-2">
+                    <p class="mb-0 fw-medium">Lunes a Viernes</p>
+                    <p class="text-primary">9:00 a.m - 6:00 p.m</p>
+                  </div>
+                  <div class="schedule-item">
+                    <p class="mb-0 fw-medium">Sábado</p>
+                    <p class="text-primary">9:00 a.m - 2:00 p.m</p>
+                  </div>
+                </div>
+
+                <div class="mt-3">
+                  <a href="tel:+523333333333" class="btn btn-sm btn-outline-primary">
+                    <i class="fas fa-phone me-1"></i> Llamar
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-8 branch-map">
+              <div class="ratio ratio-16x9 h-100">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d242.2793520234277!2d-100.51746554917992!3d21.296743840590104!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d4cfcc04c46bff%3A0x92783be419f5d678!2sPatio%20Bistro.Deli!5e0!3m2!1ses-419!2smx!4v1753127168525!5m2!1ses-419!2smx"
+                  style="border:0;" allowfullscreen="" loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sucursal 5 -->
+        <div class="branch-card card mb-5 border-0 shadow-sm overflow-hidden">
+          <div class="row g-0">
+            <div class="col-md-4 branch-info">
+              <div class="card-body p-4">
+                <div class="branch-badge bg-success text-white mb-3">San Felipe</div>
+                <p class="mb-3"><i class="fas fa-map-marker-alt text-primary me-2"></i> C. Obregón #112 Int 7, Centro
+                  comercial Vianney</p>
+
+                <div class="schedule-box bg-light p-3 rounded">
+                  <h6 class="d-flex align-items-center text-muted mb-3">
+                    <i class="far fa-clock me-2"></i> Horario
+                  </h6>
+                  <div class="schedule-item mb-2">
+                    <p class="mb-0 fw-medium">Lunes a Viernes</p>
+                    <p class="text-primary">9:00 a.m - 6:00 p.m</p>
+                  </div>
+                  <div class="schedule-item">
+                    <p class="mb-0 fw-medium">Sábado</p>
+                    <p class="text-primary">9:00 a.m - 2:00 p.m</p>
+                  </div>
+                </div>
+
+                <div class="mt-3">
+                  <a href="tel:+523333333333" class="btn btn-sm btn-outline-primary">
+                    <i class="fas fa-phone me-1"></i> Llamar
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-8 branch-map">
+              <div class="ratio ratio-16x9 h-100">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d464.08783692523366!2d-101.21515321471692!3d21.480179082060534!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x842afd0061248f6b%3A0x9b260c6b0bb80ffa!2sCENTRO%20COMERCIAL%20VIANNEY!5e0!3m2!1ses-419!2smx!4v1753125446712!5m2!1ses-419!2smx"
+                  style="border:0;" allowfullscreen="" loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sucursal 6 -->
+        <div class="branch-card card border-0 shadow-sm overflow-hidden">
+          <div class="row g-0">
+            <div class="col-md-4 branch-info">
+              <div class="card-body p-4">
+                <div class="branch-badge bg-success text-white mb-3">Victoria</div>
+                <p class="mb-3"><i class="fas fa-map-marker-alt text-primary me-2"></i> Morelos 24, Centro</p>
+
+                <div class="schedule-box bg-light p-3 rounded">
+                  <h6 class="d-flex align-items-center text-muted mb-3">
+                    <i class="far fa-clock me-2"></i> Horario
+                  </h6>
+                  <div class="schedule-item mb-2">
+                    <p class="mb-0 fw-medium">Lunes a Viernes</p>
+                    <p class="text-primary">9:00 a.m - 6:00 p.m</p>
+                  </div>
+                  <div class="schedule-item">
+                    <p class="mb-0 fw-medium">Sábado</p>
+                    <p class="text-primary">9:00 a.m - 2:00 p.m</p>
+                  </div>
+                </div>
+
+                <div class="mt-3">
+                  <a href="tel:+523333333333" class="btn btn-sm btn-outline-primary">
+                    <i class="fas fa-phone me-1"></i> Llamar
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-8 branch-map">
+              <div class="ratio ratio-16x9 h-100">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3719.519995586905!2d-100.217175!3d21.211219!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjHCsDEyJzQwLjQiTiAxMDDCsDEzJzAxLjgiVw!5e0!3m2!1ses-419!2smx!4v1753126832732!5m2!1ses-419!2smx"
+                  style="border:0;" allowfullscreen="" loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"></iframe>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </footer>
+    </section>
+
+ <!-- Botón flotante -->
+<div class="chat-button" onclick="toggleChat()">
+  <img src="../assets/oso.png" alt="Abrir chat" style="width: 32px; height: 32px;" />
+</div>
+
+<!-- Widget del chatbot -->
+<div id="chatWidget" class="chat-widget" style="display: none;">
+  <div class="chat-header">
+    <img src="../assets/oso.png" alt="Avatar" class="avatar" />
+    <span><strong>Prestamoso</strong> · Asistente virtual</span>
+    <button class="close-button" onclick="toggleChat()">✖</button>
+  </div>
+  <iframe
+    src="https://marco98p3.pythonanywhere.com/"
+    class="chat-iframe"
+    allow="microphone"
+    title="Chatbot"
+    scrolling="no"
+    frameborder="0"
+  ></iframe>
+</div>
+
+<script>
+  function toggleChat() {
+    const chat = document.getElementById("chatWidget");
+    chat.style.display = chat.style.display === "none" ? "flex" : "none";
+  }
+</script>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+
+
+    <!-- Script para animaciones al hacer scroll -->
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        // Animación de aparición al hacer scroll
+        const cards = document.querySelectorAll('.service-card');
+
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.style.opacity = '1';
+            }
+          });
+        }, { threshold: 0.1 });
+
+        cards.forEach(card => {
+          observer.observe(card);
+        });
+
+        // Efecto especial para el botón de beneficios
+        const benefitsBtn = document.querySelector('.benefits-card .btn');
+        benefitsBtn.addEventListener('mouseenter', function () {
+          this.innerHTML = '<i class="fas fa-gift me-2"></i> Ver todos los beneficios';
+        });
+
+        benefitsBtn.addEventListener('mouseleave', function () {
+          this.innerHTML = 'Más información';
+        });
+      });
+    </script>
+
+    <footer class="modern-footer pt-5">
+      <div class="container footer-content">
+        <div class="row g-4 mb-5">
+          <!-- Company Info -->
+          <div class="col-lg-4 col-md-6">
+            <a href="#" class="footer-logo d-block mb-4">
+              <img
+                src="https://static.wixstatic.com/media/0bf950_155f8cd81f6d4fe5ac3419b8e0397b40~mv2.png/v1/crop/x_0,y_260,w_6000,h_2480/fill/w_508,h_210,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/LOGO%20SIN%20FONDO%20OFICIAL.png"
+                alt="logo" width="120" height="50">
+            </a>
+            <p class="text-muted mb-4">
+              VAMOS A MEJORAR
+              es una empresa mexicana dedicada al otorgamiento de servicios financieros para micro empresas con la
+              convicción de crecimiento Laboral y Personal
+            </p>
+            <ul class="contact-info mb-4">
+              <li>
+                <i class="fas fa-map-marker-alt"></i>
+                <span>Rivera del Río #65 Int B - 3 Plaza Patria Zona Centro, C.P. 37800, Dolores Hidalgo,
+                  Guanajuato</span>
+              </li>
+              <li>
+                <i class="fas fa-phone"></i>
+                <span>(+52) 4181544583</span>
+              </li>
+              <li>
+                <i class="fas fa-envelope"></i>
+                <span>vamosamejorar@vamosamejorar.com</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Quick Links -->
+          <div class="col-lg-4 col-md-6">
+            <h3 class="footer-title">Links rápidos</h3>
+            <ul class="quick-links">
+              <li><a href="#">Aviso de privacidad</a></li>
+              <li><a href="#">Unidad Especializada</a></li>
+              <li><a href="#">Costos y Comisiones de nuestros productos</a></li>
+              <li><a href="#">Condusef</a></li>
+              <li><a href="#">Buro de entidades financieras</a></li>
+              <li><a href="#">Términos y condiciones</a></li>
+            </ul>
+          </div>
+
+          <!-- Newsletter -->
+          <div class="col-lg-4 col-md-12">
+            <h3 class="footer-title">Mantente conectado</h3>
+            <div class="social-links">
+              <a href="https://www.facebook.com/financiera.vam" class="social-icon"><i
+                  class="fab fa-facebook-f"></i></a>
+              <a href="https://www.instagram.com/vamosamejora.r?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                class="social-icon"><i class="fab fa-instagram"></i></a>
+              <a href="https://wa.me/5214181544583?text=Quiero%20m%C3%A1s%20informaci%C3%B3n%20para%20solicitar%20mi%20cr%C3%A9dito"
+                class="social-icon"><i class="fab fa-whatsapp"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="footer-bottom">
+        <div class="container">
+          <div class="row py-4">
+            <div class="col-md-6 text-center text-md-start">
+              <p>&copy; 2025 VAMOS A MEJORAR S.A. DE C.V. SOFOM. E.N.R. Todos los derechos reservados.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
 </body>
 
 </html>
-
-
-
-
-
-<!-- 
-<!doctype html>
-<html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tipos de Crédito - Soluciones Financieras</title>
-
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-    <style>
-      :root {
-        --primary-color: #2563eb;
-        --secondary-color: #f9ba19;
-        --dark-color: #1e293b;
-        --light-color: #f8fafc;
-      }
-
-      body {
-        font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
-        background-color: var(--light-color);
-      }
-    .navbar-custom {
-        position: sticky;
-        top: 0;
-        z-index: 1030;
-        background-color: #ffffff !important;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-        transition: all 0.3s ease-in-out;
-      }
-
-      .navbar-brand img {
-        transition: transform 0.3s ease;
-      }
-
-      .navbar-brand img:hover {
-        transform: scale(1.05);
-      }
-
-      .nav-link {
-        font-weight: 500;
-        transition: color 0.2s ease;
-      }
-
-      .nav-link:hover {
-        color: #0d6efd;
-      }
-      .hero-video {
-        width: 100%;
-        height: auto;
-        max-height: 70vh;
-        object-fit: cover;
-        border-radius: 0 0 12px 12px;
-        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-      }
-
-      .section-title {
-        position: relative;
-        padding-bottom: 1rem;
-        margin: 3rem 0;
-        text-align: center;
-        color: var(--dark-color);
-      }
-
-      .section-title:after {
-        content: '';
-        position: absolute;
-        bottom: 0;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 80px;
-        height: 4px;
-        background: var(--secondary-color);
-        border-radius: 2px;
-      }
-
-      .credit-card {
-        border: none;
-        border-radius: 12px;
-        overflow: hidden;
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
-        height: 100%;
-        background-color: white;
-      }
-
-      .credit-card:hover {
-        transform: translateY(-8px);
-        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
-      }
-
-      .card-img-container {
-        padding: 1.5rem;
-        display: flex;
-        justify-content: center;
-      }
-
-      .card-img {
-        width: 180px;
-        height: 180px;
-        object-fit: cover;
-        border: 4px solid var(--secondary-color);
-        transition: transform 0.3s ease;
-      }
-
-      .credit-card:hover .card-img {
-        transform: scale(1.05);
-      }
-
-      .card-title {
-        font-weight: 700;
-        color: var(--secondary-color);
-        margin-bottom: 1rem;
-        font-size: 1.5rem;
-      }
-
-      .card-text {
-        color: #64748b;
-        margin-bottom: 1.5rem;
-        padding: 0 1.5rem;
-      }
-
-      .btn-credit {
-        background-color: var(--primary-color);
-        color: white;
-        border: none;
-        padding: 0.5rem 1.5rem;
-        border-radius: 25px;
-        font-weight: 600;
-        transition: all 0.3s ease;
-        margin-bottom: 1.5rem;
-      }
-
-      .btn-credit:hover {
-        background-color: #1d4ed8;
-        transform: translateY(-2px);
-        box-shadow: 0 5px 15px rgba(37, 99, 235, 0.3);
-      }
-
-      .benefits-list {
-        text-align: left;
-        padding: 0 2rem 1.5rem;
-      }
-
-      .benefits-list li {
-        margin-bottom: 0.5rem;
-        display: flex;
-        align-items: flex-start;
-      }
-
-      .benefits-list i {
-        color: var(--secondary-color);
-        margin-right: 0.5rem;
-        margin-top: 0.2rem;
-      }
-
-      @media (max-width: 768px) {
-        .card-img {
-          width: 140px;
-          height: 140px;
-        }
-
-        .section-title {
-          font-size: 1.8rem;
-        }
-      }
-
-      .service-card {
-          transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .service-card:hover {
-          transform: translateY(-8px);
-          box-shadow: 0 12px 20px rgba(0, 0, 0, 0.1);
-        }
-
-    </style>
-  </head>
-  <nav class="navbar navbar-expand-lg navbar-custom">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">
-        <img src="https://static.wixstatic.com/media/0bf950_155f8cd81f6d4fe5ac3419b8e0397b40~mv2.png/v1/crop/x_0,y_260,w_6000,h_2480/fill/w_381,h_158,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/LOGO%20SIN%20FONDO%20OFICIAL.png" height="80" width="170" alt="Logo">
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Inicio</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Crédito comunal solidario</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Crédito individual</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Sobre nosotros</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Sociales
-            </a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Facebook</a></li>
-              <li><a class="dropdown-item" href="#">Instagram</a></li>
-              <li><a class="dropdown-item" href="#">Whatsapp</a></li>
-              <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="#">Artixan</a></li>
-            </ul>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-  <body>
-    <section class="hero-section">
-      <div class="container-fluid px-0">
-        <video class="hero-video" autoplay muted loop>
-          <source src="../assets/file.mp4" type="video/mp4">
-          Tu navegador no soporta videos HTML5
-        </video>
-      </div>
-    </section>
-
-    <section class="credit-types py-5">
-      <div class="container">
-        <h2 class="section-title display-5 fw-bold">Nuestros Tipos de Crédito</h2>
-
-        <div class="row g-4">
-           Comunal Credit Card 
-          <div class="col-lg-6 col-md-6">
-            <div class="credit-card">
-              <div class="card-img-container">
-                <img src="../assets/grupos.png" class="card-img rounded-circle" alt="Grupo de personas">
-              </div>
-              <div class="card-body text-center">
-                <h3 class="card-title">Crédito Comunal Solidario</h3>
-                <p class="card-text">Financiamiento diseñado para grupos organizados que buscan crecimiento colectivo con responsabilidad compartida.</p>
-                <ul class="benefits-list">
-                  <li><i class="fas fa-check-circle"></i> Tasas preferenciales para grupos</li>
-                  <li><i class="fas fa-check-circle"></i> Garantía solidaria</li>
-                  <li><i class="fas fa-check-circle"></i> Capacitación financiera incluida</li>
-                </ul>
-                <button class="btn btn-credit">
-                  <i class="fas fa-info-circle me-2"></i>Conocer más
-                </button>
-              </div>
-            </div>
-          </div>
-
-           Individual Credit Card 
-          <div class="col-lg-6 col-md-6">
-            <div class="credit-card">
-              <div class="card-img-container">
-                <img src="../assets/persona.png" class="card-img rounded-circle" alt="Persona individual">
-              </div>
-              <div class="card-body text-center">
-                <h3 class="card-title">Crédito Individual</h3>
-                <p class="card-text">Solución personalizada para tus proyectos personales o empresariales con condiciones adaptadas a tus necesidades.</p>
-                <ul class="benefits-list">
-                  <li><i class="fas fa-check-circle"></i> Montos según tu capacidad</li>
-                  <li><i class="fas fa-check-circle"></i> Plazos flexibles</li>
-                  <li><i class="fas fa-check-circle"></i> Desembolso rápido</li>
-                </ul>
-                <button class="btn btn-credit">
-                  <i class="fas fa-info-circle me-2"></i>Conocer más
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-       Otros Servicios 
-      <section class="otros-servicios py-5 bg-light">
-        <div class="container">
-          <h2 class="text-center fw-bold mb-4">Otros Servicios</h2>
-          <div class="row g-4 justify-content-center">
-            
-             Servicio 1 
-            <div class="col-md-4">
-              <div class="service-card text-center p-4 shadow-sm rounded bg-white h-100">
-                <i class="fas fa-file-invoice-dollar fa-2x mb-3 text-warning"></i>
-                <h5 class="fw-semibold">Pago de servicios</h5>
-                <p class="text-muted">Realiza pagos de luz, agua, teléfono y más en nuestras sucursales.</p>
-              </div>
-            </div>
-
-             Servicio 2 
-            <div class="col-md-4">
-              <div class="service-card text-center p-4 shadow-sm rounded bg-white h-100">
-                <i class="fas fa-hand-holding-usd fa-2x mb-3 text-warning"></i>
-                <h5 class="fw-semibold">Remesas</h5>
-                <p class="text-muted">Recibe y envía dinero a nivel nacional e internacional.</p>
-              </div>
-            </div>
-
-             Servicio 3 
-            <div class="col-md-4">
-              <div class="service-card text-center p-4 shadow-sm rounded bg-white h-100">
-                <i class="fas fa-mobile-alt fa-2x mb-3 text-warning"></i>
-                <h5 class="fw-semibold">Recarga de tiempo aire</h5>
-                <p class="text-muted">Realiza recargas para todas las compañías en nuestras sucursales.</p>
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </section>
-
-
-     Preguntas Frecuentes
-    <section class="faq py-5 bg-light">
-      <div class="container">
-        <h2 class="section-title display-5 fw-bold">Preguntas Frecuentes</h2>
-        <div class="accordion" id="accordionExample">
-          <div class="accordion-item">
-            <h2 class="accordion-header">
-              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
-                ¿Qué necesito para solicitar un crédito?
-              </button>
-            </h2>
-            <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
-              <div class="accordion-body">
-                Necesitas contar con identificación oficial, comprobante de domicilio y demostrar tu capacidad de pago.
-              </div>
-            </div>
-          </div>
-          <div class="accordion-item">
-            <h2 class="accordion-header">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
-                ¿Cuánto tiempo tarda la aprobación?
-              </button>
-            </h2>
-            <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-              <div class="accordion-body">
-                Generalmente el proceso tarda entre 24 a 48 horas, dependiendo de la documentación y verificación.
-              </div>
-            </div>
-          </div>
-          <div class="accordion-item">
-            <h2 class="accordion-header">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">
-                ¿Puedo liquidar mi crédito antes del plazo?
-              </button>
-            </h2>
-            <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-              <div class="accordion-body">
-                Sí, puedes realizar pagos anticipados sin penalización y así reducir intereses.
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-        Bootstrap JS Bundle 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
-  </body>
-
-  <footer>
-<p class="text-center">    © 2025 Vamos A Mejorar S.A de C.V SOFOM E.N.R. Todos los derechos reservados.</p>
-
-  </footer>
-</html>
-
-
-
-
- -->
